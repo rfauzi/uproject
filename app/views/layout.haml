@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title UCOURSES - Online Courses Management tool
+    %script{:src => "/javascripts/jquery.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/application.js", :type => "text/javascript"}
+
+
+    %link{:href => "/stylesheets/application.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/framework.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+  
+
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    %meta{:content => "Online Course Management", :name => "description"}
+    %meta{:content => "kursus online, online course management, e-learning, belajar online", :name => "keywords"}
+
+  %body
+    #fb-root
+    %script{:src => "/javascripts/facebook.js", :type => "text/javascript"}
+    #container
+      #main
+        = yield 
+        
