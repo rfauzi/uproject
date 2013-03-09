@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 gem 'sinatra'
-gem 'haml'
+gem 'haml', '3.1.7'
 
 gem "activerecord"
 gem "sinatra-activerecord"

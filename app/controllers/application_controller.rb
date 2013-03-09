@@ -1,7 +1,7 @@
 class ApplicationController  < Application
+  enable :sessions
 
   get "/" do 
-    puts session[:current_user]
     haml :index
   end
 
@@ -10,17 +10,18 @@ class ApplicationController  < Application
   end
 
   post "/facebook_auth" do
-    puts params
-    @user = User.where(:id => params[:uid]).first
-    if @user.present?
-      session[:current_user] = @user
-    else
+    @user = User.where(:uid => params[:uid]).first
+    unless @user.present?
       @success = User.register_facebook(params)
-      @user = User.where(:id => params[:uid]).first
-      session[:current_user] = @user
+      @user = User.where(:uid => params[:uid]).first
     end
 
+    session[:login] = @user
   end
 
+  post "/logout" do
+    session[:login] = nil
+    redirect '/'
+  end
 
 end

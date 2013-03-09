@@ -1,0 +1,11 @@
+- if current_user.present?
+  .left
+    Hi
+    = current_user.username.capitalize
+  .right
+    %a{:href => "javascript:app.logout()"} Logout
+- else
+  .left
+  .right
+    %a{:href => "javascript:app.login()"} Login facebook  
+.clear    
