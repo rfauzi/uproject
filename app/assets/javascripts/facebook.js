@@ -23,18 +23,23 @@ window.fbAsyncInit = function() {
 
 function login() {
   FB.login(function(response) {
-      if (response.authResponse) {
-          // connected
-      } else {
-          // cancelled
-      }
-  });
-}
-
-function getFbAuth(){
-  var resp;
-  FB.api('/me', function(response) {
-    resp = response
-  });
-  return resp
+    if (response.authResponse) {
+      var _access_token = response.authResponse.accessToken;
+      var _uid = response.authResponse.userID;
+      FB.api('/me', function(response) {
+        var _username = response.username;
+        var _bio = response.bio;
+        var _email = response.email
+        $.post('/facebook_auth', {
+          username: _username,
+          uid: _uid,
+          access_token: _access_token,
+          bio: _bio,
+          email: _email
+        })
+      });
+    } else {
+        // cancelled
+    }
+  }, {scope: 'email'});
 }
