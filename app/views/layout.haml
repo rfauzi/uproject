@@ -15,6 +15,12 @@
     #fb-root
     %script{:src => "/javascripts/application.js", :type => "text/javascript"}
     #container
+      #loader memproses..
+      - if session[:flash].present?
+        #flash{:class => session[:flash][:type]}
+          = session[:flash][:message]
+          - session[:flash] = nil
+          %a{class: "close", href: "javascript:app.close('#flash')"} &times;
       #main
         = yield 
         

@@ -273,7 +273,7 @@ body{
 }
 
 #container{
-
+  position: relative;
 }
 
 #main{
@@ -283,3 +283,30 @@ body{
   background: #fff;
   padding: 20px;
 }
+
+#loader{
+  height: 20px;
+  width: 70px;
+  background: url('/images/loader.gif') top center no-repeat;
+  position: absolute;
+  margin: 0 50%;
+  top: -40px;
+  padding-top: 20px;
+  display: none;
+}
+
+#flash{
+  padding: 10px;
+  margin: 0 auto;
+  width: 822px;
+  background: #eee;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+#flash.warning{background: #fcf8e3;border: 1px solid #fbeed5; color: #c09853;}
+#flash.error{color: #b94a48;background-color: #f2dede;border-color: #eed3d7;}
+#flash.success{color: #468847;background-color: #dff0d8;border-color: #d6e9c6;}
+
+
+#flash .close, #flash .close:visited{float: right; color: #333; text-decoration: none}

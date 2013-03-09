@@ -1,3 +1,8 @@
+$(document).ready(function(){
+  window.app = new application();
+})
+
+
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '177537562330878', // App ID
@@ -37,12 +42,10 @@ function application() {
             type: "POST",
             url: "/facebook_auth",
             data: {username: _username, uid: _uid, access_token: _access_token, bio: _bio, email: _email},
-            success: function(){              
-              window.location = "/"
-            },
-            error: function(){
-              alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')
-            }
+            beforeSend: function(){$('#loader').show()},
+            complete: function(){$('#loader').hide()},
+            success: function(data){$('#main').html(data)},
+            error: function(){alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')}
           });
 
         });
@@ -55,15 +58,15 @@ function application() {
   application.logout = function(){
     $.ajax({
       type: "POST",
-      url: "/logout",      
-      success: function(){window.location = "/"},
-      error: function(){
-        alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')
-      }
+      url: "/logout",
+      beforeSend: function(){$('#loader').show()},
+      complete: function(){$('#loader').hide()},
+      success: function(data){$('#main').html(data)},
+      error: function(){alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')}
     });
   }
-}
 
-$(document).ready(function(){
-  window.app = new application();
-})
+  application.close = function(el){
+    $(el).remove()
+  }
+}
