@@ -36,7 +36,7 @@ class ApplicationController  < Application
   end
 
   get "/matrikulasi" do
-    if current_user.present?
+    if current_user.survei.present?
       session[:flash] = {type: 'warning', message: "Kamu sudah melakukan matrikulasi"}
       redirect '/' 
     else
