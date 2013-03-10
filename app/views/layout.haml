@@ -19,8 +19,8 @@
       - if session[:flash].present?
         #flash{:class => session[:flash][:type]}
           = session[:flash][:message]
-          - session[:flash] = nil
+          - session[:flash].clear
           %a{class: "close", href: "javascript:app.close('#flash')"} &times;
-      #main
+      #main        
         = yield 
         

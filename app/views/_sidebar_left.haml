@@ -1,0 +1,15 @@
+.sidebar-left
+  %a{href: '/'}
+    .avatar
+      %img{src: "http://graph.facebook.com/#{current_user.uid}/picture"}      
+      = current_user.username.capitalize
+  .clear
+  %br
+  %ul
+    %li
+      %a{href: '/profile'} Profile
+    - unless current_user.survei.present?
+      %li
+        %a{href: '/matrikulasi'} Matrikulasi
+    %li
+      %a{href: '/members'} Members

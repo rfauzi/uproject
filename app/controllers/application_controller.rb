@@ -1,14 +1,16 @@
 class ApplicationController  < Application
-  enable :sessions
 
-  ['/matrikulasi', "/members"].each do |path|
+  ['/matrikulasi', "/members", "/profile"].each do |path|
     before path do
-      session[:flash] = {type: 'warning', message: "Silahkan login Terlebih dahulu"}
-      redirect '/' if session[:login].nil?
+      if session[:login].nil?
+        session[:flash] = {type: 'warning', message: "Silahkan login Terlebih dahulu"} 
+        redirect '/' 
+      end
     end
   end
 
   get "/" do 
+    @messages = Message.all
     haml :index, :layout => !request.xhr?
   end
 
@@ -24,26 +26,62 @@ class ApplicationController  < Application
     end
 
     session[:login] = @user
+    @messages = Message.all
     haml :index, :layout => !request.xhr?
   end
 
   post "/logout" do
-    session[:login] = nil
+    session.clear
     redirect '/'
   end
 
   get "/matrikulasi" do
-    @survei = Survei.new
-    haml :matrikulasi
+    if current_user.present?
+      session[:flash] = {type: 'warning', message: "Kamu sudah melakukan matrikulasi"}
+      redirect '/' 
+    else
+      if current_user.profile.present?
+        @survei = current_user.build_survei
+        haml :matrikulasi      
+      else
+        session[:flash] = {type: 'warning', message: "Silahkan isi profile terlebih dahulu"}
+        redirect '/profile'
+      end
+    end
   end
 
   post '/matrikulasi' do
-    @survei = Survei.new(params[:survei])
+    redirect '/profile' unless current_user.profile.present?
+    @survei = current_user.build_survei(params[:matrikulasi])
     if @survei.save
       session[:flash] = {type: 'success', message: "Terima kasih"}
+      redirect '/'
     else
       session[:flash] = {type: 'error', message: @survei.errors.full_messages.join(", ")}
+      redirect '/matrikulasi'
     end
+  end
+
+  get '/profile' do
+    @profile = current_user.profile.present? ? current_user.profile : current_user.build_profile
+    haml :profile
+  end
+
+  post '/profile' do
+    @profile = current_user.build_profile(params[:profile])
+    if @profile.save
+      session[:flash] = {type: 'success', message: "Terima kasih"}
+    else
+      session[:flash] = {type: 'error', message: @profile.errors.full_messages.join(", ")}      
+    end
+    redirect '/profile'
+  end
+
+  post '/message' do
+    redirect '/' if !request.xhr?
+    @message = current_user.messages.new(message: params[:message])
+    @message.save
+    haml :message, :layout => false
   end
 
   get '/members' do

@@ -1,2 +1,19 @@
 .header
   = partial 'header'
+.body
+  - if current_user.present?
+    = partial 'sidebar_left'
+    .sidebar-right
+      %h2 Conversations
+      #message-box
+        .wrapper
+          - @messages.each do |msg|
+            .message{id: "message_#{msg.id}"}
+              .user= "#{msg.user.username} :"
+              .content= msg.message
+              .date= msg.created_at.strftime("%d %b, %H:%M")
+              .clear
+      #message-form
+        %input{class: "message", maxlength: "60"}
+        %input{type: "submit", value: "kirim", class: 'send-message'}
+    .clear

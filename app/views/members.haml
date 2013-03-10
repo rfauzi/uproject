@@ -1,1 +1,15 @@
-members
+.header
+  = partial 'header'
+.body
+  = partial 'sidebar_left'
+  .sidebar-right
+    - User.all.each do |u|
+      .avatar.profile
+        %img{src: "http://graph.facebook.com/#{u.uid}/picture", class: "left"}
+        .right
+          %span= u.username.capitalize
+          %span= "angkatan #{u.profile.angkatan}"
+          %span= "semester #{u.profile.semester}"
+        .clear
+
+  .clear      

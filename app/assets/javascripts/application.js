@@ -1,5 +1,6 @@
 $(document).ready(function(){
   window.app = new application();
+  app.sendMessage()
 })
 
 
@@ -68,5 +69,24 @@ function application() {
 
   application.close = function(el){
     $(el).remove()
+  }
+
+  application.sendMessage = function(){
+    $('#message-form .send-message').live('click', function(){
+      _message = $('#message-form .message').val();
+      $.ajax({
+        type: "POST",
+        url: "/message",
+        data: {message: _message},
+        beforeSend: function(){$('#loader').show()},
+        complete: function(){$('#loader').hide()},
+        success: function(data){
+          $('#message-box .wrapper').append(data);
+          $('#message-box .wrapper .message').last().hide().slideDown()
+          $('#message-form .message').val('');
+        },
+        error: function(){alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')}
+      });
+    })
   }
 }

@@ -310,3 +310,117 @@ body{
 
 
 #flash .close, #flash .close:visited{float: right; color: #333; text-decoration: none}
+
+#main .header{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+
+ .avatar{
+  margin-right: 15px;
+  border: 1px solid white;
+  padding: 5px;
+  background: whiteSmoke;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0 1px 0 #D0D0D0, 0 4px 0 #D7D7D7, 0 5px 0 #C1C1C1, 0 6px 4px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0 1px 0 #d0d0d0, 0 4px 0 #d7d7d7, 0 5px 0 #c1c1c1, 0 6px 4px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0 1px 0 #D0D0D0, 0 4px 0 #D7D7D7, 0 5px 0 #C1C1C1, 0 6px 4px rgba(0, 0, 0, 0.17);
+  overflow: hidden;
+  float: left;
+}
+
+.avatar.profile .right {margin-left: 5px}
+.avatar.profile .right span{display: block;}
+.avatar img{vertical-align: top}
+#main .body .sidebar-left .avatar img{vertical-align: middle}
+
+#main .body .sidebar-left{
+  float: left;
+  width: 200px;  
+  min-height: 250px;
+}
+
+#main .body .sidebar-right{
+  float: left;
+  width: 579px;
+  padding: 0 10px;
+  border-left: 1px solid #eee;
+}
+
+#main .body .sidebar-right form{}
+#main .body .sidebar-right .group {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 10px;
+}
+
+#main .body .sidebar-right form .group label{
+  width: 190px;
+  display: block;
+  float: left;
+  min-height: 10px;
+}
+
+#main .body .sidebar-right form .group input, #main .body .sidebar-right form .group textarea{
+  height: 20px;
+  border: 1px solid #ccc;
+  width: 220px;
+  padding: 4px 5px;
+}
+
+#main .body .sidebar-right form .group input[type="submit"]{
+  width: auto;
+  padding: 10px 30px;
+  height: auto;
+  background: white;
+  cursor: pointer;
+}
+
+#main .body .sidebar-right form .group input[type="submit"]:hover{
+  background: #ccc;
+  color: white;
+}
+
+#message-box{
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#message-box .wrapper{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+#message-box .message {
+padding: 5px 10px;
+border-top: 1px solid #eee;
+}
+#message-box .message .user{
+  float: left;
+  margin-right: 10px;
+  color: #ccc;
+}
+#message-box .message  .content{float: left;}
+#message-box .message  .date{float: right;color: #eee;}
+
+#message-form input{
+  height: 20px;
+  border: 1px solid #eee;
+  width: 77%;
+  padding: 4px 5px;
+}
+
+#message-form input[type="submit"]{
+  width: 20%;
+  background: white;
+  cursor: pointer;
+  height: 30px;
+}

@@ -1,0 +1,5 @@
+.message{id: "message_#{@message.id}"}
+  .user= "#{@message.user.username} :"
+  .content= @message.message
+  .date= @message.created_at.strftime("%d %b, %H:%M")
+  .clear

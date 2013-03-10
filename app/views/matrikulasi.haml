@@ -1,0 +1,8 @@
+.header
+  = partial 'header'
+.body
+  = partial 'sidebar_left'
+  .sidebar-right
+    %form{action: '/matrikulasi', method: :post}    
+      = partial 'form_survei'
+  .clear      

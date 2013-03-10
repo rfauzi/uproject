@@ -1,0 +1,40 @@
+.header
+  = partial 'header'
+.body
+  = partial 'sidebar_left'
+  .sidebar-right
+    - if @profile.persisted?
+      .group
+        %label Angkatan
+        %span= @profile.angkatan
+      .group
+        %label Semester
+        %span= @profile.semester
+      .group
+        %label Nim
+        %span= @profile.nim
+    - else
+      %form{action: '/profile', method: :post}    
+        .group
+          %label Angkatan
+          %select{name: 'profile[angkatan]'}
+            - (2009..2013).each do |x|
+              %option{value: x}= x
+          .clear
+        .group
+          %label Semester
+          %select{name: 'profile[semester]'}
+            - (1..8).each do |x|
+              %option{value: x}= x
+          .clear
+
+        .group
+          %label NIM
+          %input{name: 'profile[nim]', placeholder: "A1B09XXX"}
+          .clear
+
+        .group
+          %label 
+          %input{type: 'submit', value: "Submit"}
+          .clear
+  .clear      
