@@ -8,8 +8,9 @@
         %img{src: "http://graph.facebook.com/#{u.uid}/picture", class: "left"}
         .right
           %span= u.username.capitalize
-          %span= "angkatan #{u.profile.angkatan}"
-          %span= "semester #{u.profile.semester}"
+          - if u.profile.present?
+            %span= "angkatan #{u.profile.angkatan}"
+            %span= "semester #{u.profile.semester}"
         .clear
 
   .clear      
