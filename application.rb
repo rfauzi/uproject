@@ -25,7 +25,7 @@ class Application
 
   configure do
     set :protection, :except => [:http_origin]
-    use Rack::Protection::HttpOrigin, :origin_whitelist => ['http://ebr.web.id']
+    use Rack::Protection::HttpOrigin, :origin_whitelist => ['http://ebr.web.id/kursus']
 
     set :method_override, true 
     set :views, settings.root + '/app/views'
