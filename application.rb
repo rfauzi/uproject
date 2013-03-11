@@ -24,7 +24,9 @@ class Application
   end
 
   configure do
-    set :protection, :origin_whitelist => ['http://ebr.web.id', 'http://ebr.web.id/kursus']
+    set :protection, :except => [:http_origin]
+    use Rack::Protection::HttpOrigin, :origin_whitelist => ['http://ebr.web.id']
+
     set :method_override, true 
     set :views, settings.root + '/app/views'
     set :public_folder, settings.root + "/app/assets"    
