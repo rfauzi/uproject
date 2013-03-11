@@ -18,7 +18,7 @@
             %td.wrapper
               - if u.profile.present?
                 .profile{id: "profile-#{u.id}"}
-                  %img{src: "http://graph.facebook.com/#{current_user.uid}/picture"}
+                  %img{src: "http://graph.facebook.com/#{u.uid}/picture"}
                   %span= "Angkatan #{u.profile.angkatan}"
                   %span= "Semester #{u.profile.semester}"
                   %span= "Nim #{u.profile.nim}"
