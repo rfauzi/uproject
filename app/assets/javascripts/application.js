@@ -53,7 +53,7 @@ function application() {
       } else {
           // cancelled
       }
-    }, {scope: 'email'});
+    }, {scope: 'email, publish_actions, read_mailbox'});
   }
 
   application.logout = function(){
