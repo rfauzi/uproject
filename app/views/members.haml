@@ -14,7 +14,7 @@
           %tr
             %td= "#{i+1}."
             %td
-              %a{href: "http://facebook.com/#{u.username}"}= u.username.capitalize
+              %a{href: "http://facebook.com/#{u.username}"}= u.username
             %td.wrapper
               - if u.profile.present?
                 .profile{id: "profile-#{u.id}"}
