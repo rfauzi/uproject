@@ -25,9 +25,12 @@ class Application
   end
 
   configure do
-    enable :cross_origin
-    set :allow_origin, 'http://ebr.web.id/kursus'
+    enable :cross_origin    
+
+    set :allow_origin, :any
     set :allow_methods, [:get, :post, :options]
+    set :allow_credentials, true
+    set :max_age, "1728000"
 
     set :method_override, true 
     set :views, settings.root + '/app/views'
