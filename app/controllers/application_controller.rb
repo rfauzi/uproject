@@ -79,6 +79,10 @@ class ApplicationController  < Application
     haml :message, :layout => false
   end
 
+  get '/source_code' do
+    haml :source_code
+  end
+
   get '/members' do
     haml :members
   end
