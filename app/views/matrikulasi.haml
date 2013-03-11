@@ -3,6 +3,34 @@
 .body
   = partial 'sidebar_left'
   .sidebar-right
-    %form{action: '/matrikulasi', method: :post}    
-      = partial 'form_survei'
+    - if @survei.present?
+      #flash{:class => 'warning'} 
+        Kamu sudah melakukan matrikulasi
+        %a{class: "close", href: "javascript:app.close('#flash')"} &times;
+      %br
+      .group
+        %label Kursus Bahasa Pemograman Yang Diminati :
+        %span= @survei.bahasa_pemograman
+      .group
+        %label Skill Pemograman (secara umum) :
+        %span= @survei.skill_level
+      .group
+        %label Minat :
+        %span= @survei.minat_lain
+      .group
+        %label Cita - cita :
+        %span= @survei.cita_cita
+      .group
+        %label Punya Laptop? 
+        %span= (@survei.laptop)? "Ya" : "Tidak"
+      .group
+        %label Punya Akses internet?
+        %span= (@survei.akses_internet)? "Ya" : "Tidak"
+      .group
+        %label Mengikuti kursus karena di wajibkan?
+        %span= (@survei.wajib)? "Ya" : "Tidak"
+
+    - else
+      %form{action: '/matrikulasi', method: :post}    
+        = partial 'form_survei'
   .clear      

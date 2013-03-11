@@ -1,12 +1,13 @@
 $(document).ready(function(){
   window.app = new application();
-  app.sendMessage()
+  app.sendMessage();
+  app.initUserProfile()  
 })
 
 
 window.fbAsyncInit = function() {
     FB.init({
-      appId      : '177537562330878', // App ID
+      appId      : '161569670599063', // App ID
       channelUrl : 'http://ummiproject.herokuapp.com/channel', // Channel File
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
@@ -69,6 +70,14 @@ function application() {
 
   application.close = function(el){
     $(el).remove()
+  }
+
+  application.initUserProfile = function(){
+    $('.wrapper .checklist.true').hover((function(){
+      $(this).siblings(".profile").slideDown('fast');
+    }), function(){
+      $(this).siblings(".profile").slideUp('fast')
+    })
   }
 
   application.sendMessage = function(){

@@ -3,14 +3,30 @@
 .body
   = partial 'sidebar_left'
   .sidebar-right
-    - User.all.each do |u|
-      .avatar.profile
-        %img{src: "http://graph.facebook.com/#{u.uid}/picture", class: "left"}
-        .right
-          %span= u.username.capitalize
-          - if u.profile.present?
-            %span= "angkatan #{u.profile.angkatan}"
-            %span= "semester #{u.profile.semester}"
-        .clear
+    %table.members
+      %thead
+        %th{width: '4%'} No.
+        %th{width: '76%'} Username
+        %th{width: '10%'} Profil
+        %th{width: '10%'} Matrikulasi
+      %tbody
+        - User.all.each_with_index do |u, i|
+          %tr
+            %td= "#{i+1}."
+            %td
+              %a{href: "http://facebook.com/#{u.username}"}= u.username.capitalize
+            %td.wrapper
+              - if u.profile.present?
+                .profile{id: "profile-#{u.id}"}
+                  %img{src: "http://graph.facebook.com/#{current_user.uid}/picture"}
+                  %span= "Angkatan #{u.profile.angkatan}"
+                  %span= "Semester #{u.profile.semester}"
+                  %span= "Nim #{u.profile.nim}"
+              .checklist{class: u.profile.present? ? "true" : "false"}
+            %td
+              .checklist{class: u.survei.present? ? "true" : "false"}
 
-  .clear      
+    
+
+  .clear
+  

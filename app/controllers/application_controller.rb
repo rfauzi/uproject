@@ -36,17 +36,12 @@ class ApplicationController  < Application
   end
 
   get "/matrikulasi" do
-    if current_user.survei.present?
-      session[:flash] = {type: 'warning', message: "Kamu sudah melakukan matrikulasi"}
-      redirect '/' 
+    if current_user.profile.present?
+      @survei = current_user.survei.present? ? current_user.survei : current_user.build_survei
+      haml :matrikulasi      
     else
-      if current_user.profile.present?
-        @survei = current_user.build_survei
-        haml :matrikulasi      
-      else
-        session[:flash] = {type: 'warning', message: "Silahkan isi profile terlebih dahulu"}
-        redirect '/profile'
-      end
+      session[:flash] = {type: 'warning', message: "Silahkan isi profile terlebih dahulu"}
+      redirect '/profile'
     end
   end
 

@@ -266,7 +266,7 @@ blockquote {margin:1.5em;padding:1em;font-style:italic;font-size:.9em;}
 .large {font-size:1.1em;}
 .quiet {color:#999;}
 .hide {display:none;}
-a:link, a:visited {background:transparent;font-weight:700;text-decoration:underline;}
+a:link, a:visited {background:transparent;font-weight:700;text-decoration:underline; color: #0002;}
 
 body{
   background: url('/images/background.jpg')
@@ -319,6 +319,8 @@ body{
 
 
  .avatar{
+  text-shadow: 0px 1px 1px #fff;
+  color: #aaa;
   margin-right: 15px;
   border: 1px solid white;
   padding: 5px;
@@ -344,13 +346,31 @@ body{
   min-height: 250px;
 }
 
+#main .body .sidebar-left ul{padding: 0;}
+#main .body .sidebar-left ul li{
+  list-style: none;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+#main .body .sidebar-left ul li a, #main .body .sidebar-left ul li a:visited{
+  color: #ccc;
+  text-decoration: none;
+}
+
+#main .body .sidebar-left ul li a:hover{
+  color: #000;
+}
+
 #main .body .sidebar-right{
   float: left;
   width: 579px;
   padding: 0 10px;
   border-left: 1px solid #eee;
 }
-
+#main .body .sidebar-right #flash{
+  width: 100%;
+}
 #main .body .sidebar-right form{}
 #main .body .sidebar-right .group {
   margin-bottom: 10px;
@@ -424,4 +444,41 @@ border-top: 1px solid #eee;
   background: white;
   cursor: pointer;
   height: 30px;
+}
+
+table.members thead tr{}
+table.members thead th, table.members tbody td{background: none;border-bottom: 1px solid #eee}
+
+table.members .checklist{
+  background: url('/images/green_check_red_cross.jpg') no-repeat;
+  height: 20px;
+  width: 17px;
+  background-position-x: -4px;
+  margin: 0 auto;
+}
+table.members .checklist.false{background-position-x: -23px;}
+table.members .checklist.true{cursor: pointer;}
+
+.wrapper{
+  position: relative;
+}
+
+.wrapper .profile{
+  display: none;
+  position: absolute;  
+  width: 100px;
+  background: #eee;
+  right: -100px;
+  top: -50px;
+  padding: 5px;
+  box-shadow: 2px 3px 4px #ccc;
+  -webkit-box-shadow: 2px 3px 4px #ccc;
+  -moz-box-shadow: 2px 3px 4px #ccc;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.wrapper .profile span{
+  display: block;
 }
