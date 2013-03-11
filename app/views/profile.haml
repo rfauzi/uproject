@@ -18,14 +18,15 @@
         .group
           %label Angkatan
           %select{name: 'profile[angkatan]'}
-            - (2009..2013).each do |x|
+            - (2003..2013).each do |x|
               %option{value: x}= x
           .clear
         .group
           %label Semester
           %select{name: 'profile[semester]'}
-            - (1..8).each do |x|
+            - (1..8).each do |x|              
               %option{value: x}= x
+              %option{value: 0} Alumni
           .clear
 
         .group
