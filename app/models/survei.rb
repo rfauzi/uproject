@@ -3,6 +3,5 @@ class Survei < ActiveRecord::Base
 
   belongs_to :user
 
-  validates_presence_of :user_id, :skill_level, :bahasa_pemograman, :cita_cita, :minat_lain, 
-    :laptop, :akses_internet, :wajib, :message => "Harus diisi"
+  validates_presence_of :user_id, :skill_level, :bahasa_pemograman, :cita_cita, :minat_lain, :message => "Harus diisi"
 end
