@@ -3,7 +3,7 @@
 .body
   = partial 'sidebar_left'
   .sidebar-right
-    - if @survei.present?
+    - if @survei.persisted?
       #flash{:class => 'warning'} 
         Kamu sudah melakukan matrikulasi
         %a{class: "close", href: "javascript:app.close('#flash')"} &times;
