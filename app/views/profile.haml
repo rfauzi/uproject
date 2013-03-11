@@ -9,7 +9,7 @@
         %span= @profile.angkatan
       .group
         %label Semester
-        %span= @profile.semester
+        %span= display_status_mahasiswa(@profile.semester)
       .group
         %label Nim
         %span= @profile.nim

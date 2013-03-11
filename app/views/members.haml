@@ -20,11 +20,7 @@
                 .profile{id: "profile-#{u.id}"}
                   %img{src: "http://graph.facebook.com/#{u.uid}/picture"}
                   %span= "Angkatan #{u.profile.angkatan}"
-                  %span
-                    - if u.profile.semester == 0
-                      Alumni
-                    - else
-                      = "Semester #{u.profile.semester}"
+                  %span= display_status_mahasiswa(u.profile.semester)
                   %span= "Nim #{u.profile.nim}"
               .checklist{class: u.profile.present? ? "true" : "false"}
             %td
