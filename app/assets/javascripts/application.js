@@ -1,7 +1,10 @@
 $(document).ready(function(){
   window.app = new application();
   app.sendMessage();
-  app.initUserProfile()  
+  app.initUserProfile();  
+  setInterval(function() {
+    app.animateFooter()
+  }, 30000);
 })
 
 
@@ -72,6 +75,17 @@ function application() {
     $(el).remove()
   }
 
+  application.animateFooter = function(){
+    clone  = $('#footer').clone().addClass('clone');
+    $('#footer').slideUp();
+    setTimeout($('#main').after(clone), 1000);
+    $('.clone').typewriter();
+    setTimeout(function(){
+      $('.clone').slideUp().remove();
+      $('#footer').slideDown();
+    }, 15000) 
+  }
+
   application.initUserProfile = function(){
     $('.wrapper .checklist.true').hover((function(){
       $(this).siblings(".profile").slideDown('fast');
@@ -99,3 +113,19 @@ function application() {
     })
   }
 }
+
+
+
+(function($) {    
+    $.fn.typewriter = function() {
+        this.each(function() {
+            var $ele = $(this), str = $ele.text(), progress = 0;
+            $ele.text('');
+            var timer = setInterval(function() {
+                $ele.text(str.substring(0, progress++) + (progress & 1 ? '_' : ''));
+                if (progress >= str.length) clearInterval(timer);
+            }, 100);
+        });
+        return this;
+    };     
+})(jQuery);

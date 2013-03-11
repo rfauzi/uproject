@@ -23,4 +23,12 @@
           %a{class: "close", href: "javascript:app.close('#flash')"} &times;
       #main        
         = yield 
-        
+      #footer   
+        = "~"
+        Build with 
+        %a{href: 'http://www.ruby-lang.org/en/'} Ruby 
+        and
+        %a{href: 'http://www.sinatrarb.com/'} Sinatra
+        with love @ 2013 - 
+        %a{href: 'http://ebr.web.id'} Ebrweb Corp
+        = "~"
