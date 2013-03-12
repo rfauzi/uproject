@@ -1,0 +1,25 @@
+- if current_user.present?
+  .left
+    %ul
+      %li
+        %a{:href => "/"} Home
+      %li.separator
+      %li
+        %a{href: '/members'} List Anggota
+      %li.separator
+      %li.nested
+        %span Download
+        %ul.submenu
+          %li
+            %a{href: '/download?t=source_code'} This Web Source code
+          %li
+            %a{href: '/download?t=ebook'} Ebook
+          %li
+            %a{href: '/download?t=elearning'} Learn Online
+  .right
+    %a{:href => "javascript:app.logout()"} Logout
+- else
+  .left
+  .right
+    %a{:href => "javascript:app.login()"} Login dengan facebook  
+.clear    

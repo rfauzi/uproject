@@ -1,0 +1,18 @@
+.header
+  = partial '/partials/header'
+.body
+  - if current_user.present?
+    = partial '/partials/sidebar_left'
+    .sidebar-right
+      - if params[:t] == "source_code"
+        = partial 'download/source_code'
+      - else
+        %h2= params[:t].capitalize
+        %ul
+          - @download_links.each_with_index do |l, i|
+            %li               
+              %a{href: l.link, target: "_blank"}= "#{i + 1}. #{l.label}" 
+            .clear
+
+    - if ["100002565724713"].include?(current_user.uid) 
+      = partial 'download/form_add_download_link'

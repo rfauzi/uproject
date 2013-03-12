@@ -1,0 +1,22 @@
+%form{action: '/download', method: :post}
+  .group
+    %label Label
+    %input{name: 'download_link[label]', placeholder: "Label"}
+    .clear
+
+  .group
+    %label Link
+    %input{name: 'download_link[link]', placeholder: "Link"}
+    .clear
+
+  .group
+    %label Type
+    %select{name: 'download_link[link_type]'}
+      - ["ebook", "elearning"].each do |t|
+        %option{value: t}= t.capitalize
+    .clear
+
+  .group
+    %label 
+    %input{type: 'submit', value: "Submit"}
+    .clear

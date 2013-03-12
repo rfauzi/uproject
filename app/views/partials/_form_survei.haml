@@ -1,0 +1,49 @@
+.group
+  %label Kursus Bahasa Pemograman Yang Diminati
+  %select{name: 'matrikulasi[bahasa_pemograman]'}
+    - ["PHP / Codeigniter", "Web Design (HTML/CSS)", "Javascript", "Ruby / Ruby on Rails"].each do |x|
+      %option{value: x}= x
+  .clear
+
+.group
+  %label Skill Pemograman (secara umum)
+  %select{name: 'matrikulasi[skill_level]'}
+    - [[1,"Belum bisa"], [2, "Bisa sedikit"], [3, "Bisa"], [4, "Mahir"]].each do |x|
+      %option{value: x[0]}= x[1]
+  .clear
+
+.group
+  %label Minat
+  %input{name: 'matrikulasi[minat_lain]', placeholder: "IT, Musik, Olahraga, dsb"}
+  .clear
+
+.group
+  %label Cita-cita
+  %input{name: 'matrikulasi[cita_cita]', placeholder: "Programmer, Dosen, Artis Sinetron, dsb"}
+  .clear
+
+.group
+  %label Punya Laptop? 
+  %select{name: 'matrikulasi[laptop]'}
+    %option{value: 1} Ya
+    %option{value: 0} Tidak
+  .clear
+
+.group
+  %label Punya Akses internet?
+  %select{name: 'matrikulasi[akses_internet]'}
+    %option{value: 1} Ya
+    %option{value: 0} Tidak
+  .clear
+
+.group
+  %label Mengikuti kursus karena di wajibkan?
+  %select{name: 'matrikulasi[wajib]'}
+    %option{value: 1} Ya (diwajibkan dosen)
+    %option{value: 0} Tidak (atas keinginan sendiri)        
+  .clear
+
+.group
+  %label 
+  %input{type: 'submit', value: "Submit"}
+  .clear
