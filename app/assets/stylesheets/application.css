@@ -266,7 +266,6 @@ blockquote {margin:1.5em;padding:1em;font-style:italic;font-size:.9em;}
 .large {font-size:1.1em;}
 .quiet {color:#999;}
 .hide {display:none;}
-a:link, a:visited {background:transparent;font-weight:700;text-decoration:underline; color: #0002;}
 
 body{
   background: url('/images/background.jpg')
@@ -346,18 +345,48 @@ body{
   min-height: 250px;
 }
 
-#main .body .sidebar-left ul{padding: 0;}
-#main .body .sidebar-left ul li{
+ul{padding: 0;}
+ul li{
   list-style: none;
   padding: 5px;
   border-bottom: 1px solid #eee;
 }
 
-#main .body .sidebar-left ul li a, #main .body .sidebar-left ul li a:visited{
+ul li.nested{border-bottom: none}
+li.nested span{color: #ccc; cursor: pointer;}
+li.nested ul{display: none;}
+li.nested:hover ul{display: block;}
+li.separator{
+  border-left: 1px solid #eee;
+  padding: 0;
+  height: 25px;
+  margin: 0 5px;
+}
+ul li a, ul li a:visited{
   color: #ccc;
   text-decoration: none;
+  font-weight: normal;
 }
 
+
+
+.header ul li{
+  float: left;
+  border-bottom: none
+}
+.header ul li.nested{position: relative;}
+.header ul li.nested ul.submenu{
+  background: #fff;
+  box-shadow: 3px 2px 5px #ccc;
+  position: absolute;
+  -webkit-box-shadow: 3px 2px 5px #ccc;
+  -moz-box-shadow: 3px 2px 5px #ccc;
+  min-width: 170px;
+}
+.header ul li.nested ul.submenu li{
+  display: block;  
+  float: none;
+}
 #main .body .sidebar-left ul li a:hover{
   color: #000;
 }

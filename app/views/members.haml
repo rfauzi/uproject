@@ -1,7 +1,7 @@
 .header
-  = partial 'header'
+  = partial '/partials/header'
 .body
-  = partial 'sidebar_left'
+  = partial '/partials/sidebar_left'
   .sidebar-right
     %table.members
       %thead
@@ -25,8 +25,5 @@
               .checklist{class: u.profile.present? ? "true" : "false"}
             %td
               .checklist{class: u.survei.present? ? "true" : "false"}
-
-    
-
   .clear
   

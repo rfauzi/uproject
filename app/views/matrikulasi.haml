@@ -1,7 +1,7 @@
 .header
-  = partial 'header'
+  = partial '/partials/header'
 .body
-  = partial 'sidebar_left'
+  = partial '/partials/sidebar_left'
   .sidebar-right
     - if @survei.persisted?
       #flash{:class => 'warning'} 
@@ -31,6 +31,6 @@
         %span= (@survei.wajib)? "Ya" : "Tidak"
 
     - else
-      %form{action: '/matrikulasi', method: :post}    
-        = partial 'form_survei'
+      %form{action: '/partials/matrikulasi', method: :post}
+        = partial '/partials/form_survei'
   .clear      

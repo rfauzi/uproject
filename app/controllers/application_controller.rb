@@ -1,6 +1,6 @@
 class ApplicationController  < Application
 
-  ['/matrikulasi', "/members", "/profile"].each do |path|
+  ['/matrikulasi', "/members", "/profile", "/download", "/message"].each do |path|
     before path do
       if session[:login].nil?
         session[:flash] = {type: 'warning', message: "Silahkan login Terlebih dahulu"} 
@@ -46,6 +46,7 @@ class ApplicationController  < Application
   end
 
   post '/matrikulasi' do
+    puts params[:matrikulasi]
     redirect '/profile' unless current_user.profile.present?
     @survei = current_user.build_survei(params[:matrikulasi])
     if @survei.save
@@ -79,8 +80,20 @@ class ApplicationController  < Application
     haml :message, :layout => false
   end
 
-  get '/source_code' do
-    haml :source_code
+  get '/download' do
+    @download_links = DownloadLink.where(link_type: params[:t]) unless params[:t] == "source_code"
+    haml :'download/index'
+  end
+
+  post '/download' do
+    puts params[:download_link]
+    @download_link = DownloadLink.new(params[:download_link])
+    if @download_link.save
+      session[:flash] = {type: 'success', message: "Data berhasil disimpan"}
+    else
+      session[:flash] = {type: 'error', message: @download_link.errors.full_messages.join(", ")}      
+    end
+    redirect '/download'
   end
 
   get '/members' do

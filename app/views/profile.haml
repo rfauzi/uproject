@@ -1,7 +1,7 @@
 .header
-  = partial 'header'
+  = partial '/partials/header'
 .body
-  = partial 'sidebar_left'
+  = partial '/partials/sidebar_left'
   .sidebar-right
     - if @profile.persisted?
       .group

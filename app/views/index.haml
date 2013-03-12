@@ -1,8 +1,8 @@
 .header
-  = partial 'header'
+  = partial 'partials/header'
 .body
   - if current_user.present?
-    = partial 'sidebar_left'
+    = partial 'partials/sidebar_left'
     .sidebar-right
       %h2 Conversations
       #message-box
