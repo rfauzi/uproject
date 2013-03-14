@@ -7,4 +7,4 @@
 # Ignore bundler config
 /.bundle
 /uproject.db
-/app_secret.yml
+/config/app_secret.yml
