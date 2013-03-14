@@ -31,6 +31,6 @@
         %span= (@survei.wajib)? "Ya" : "Tidak"
 
     - else
-      %form{action: '/partials/matrikulasi', method: :post}
+      %form{action: '/matrikulasi', method: :post}
         = partial '/partials/form_survei'
   .clear      
