@@ -1,16 +1,14 @@
 $(document).ready(function(){
   window.app = new application();
   app.sendMessage();
-  app.initUserProfile();  
-  setInterval(function() {
-    app.animateFooter()
-  }, 30000);
+  app.initUserProfile();    
 })
 
 
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '177537562330878', // App ID
+      appId      : '161569670599063', // App ID
       channelUrl : 'http://ummiproject.herokuapp.com/channel', // Channel File
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
@@ -105,27 +103,13 @@ function application() {
         complete: function(){$('#loader').hide()},
         success: function(data){
           $('#message-box .wrapper').append(data);
-          $('#message-box .wrapper .message').last().hide().slideDown()
+          $new_element = $('#message-box .wrapper .message').last()
+          $new_element.hide().slideDown()
           $('#message-form .message').val('');
+          $('#message-box').animate({ scrollTop: $('#message-box')[0].scrollHeight}, 800);
         },
         error: function(){alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')}
       });
     })
   }
 }
-
-
-
-(function($) {    
-    $.fn.typewriter = function() {
-        this.each(function() {
-            var $ele = $(this), str = $ele.text(), progress = 0;
-            $ele.text('');
-            var timer = setInterval(function() {
-                $ele.text(str.substring(0, progress++) + (progress & 1 ? '_' : ''));
-                if (progress >= str.length) clearInterval(timer);
-            }, 100);
-        });
-        return this;
-    };     
-})(jQuery);

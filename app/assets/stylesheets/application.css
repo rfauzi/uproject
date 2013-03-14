@@ -1,6 +1,6 @@
 /* reset.css */
 html {margin:0;padding:0;border:0;}
-body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;vertical-align:baseline;}
 article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
 body {line-height:1.5;background:white;}
 table {border-collapse:separate;border-spacing:0;}
@@ -13,7 +13,7 @@ a img {border:none;}
 
 /* typography.css */
 html {font-size:100.01%;}
-body {font-size:75%;color:#222;background:#fff;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
+body {font-size:75%;color:#222;background:#fff;}
 h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
 h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
 h2 {font-size:2em;margin-bottom:0.75em;}
@@ -253,11 +253,10 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 
 
 /* print.css */
-body {line-height:1.5;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;color:#000;background:none;font-size:10pt;}
+body {line-height:1.5;color:#000;background:none;font-size:10pt;}
 .container {background:none;}
 hr {background:#ccc;color:#ccc;width:100%;height:2px;margin:2em 0;padding:0;border:none;}
 hr.space {background:#fff;color:#fff;visibility:hidden;}
-h1, h2, h3, h4, h5, h6 {font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif;}
 code {font:.9em "Courier New", Monaco, Courier, monospace;}
 a img {border:none;}
 p img.top {margin-top:0;}
@@ -268,7 +267,8 @@ blockquote {margin:1.5em;padding:1em;font-style:italic;font-size:.9em;}
 .hide {display:none;}
 
 body{
-  background: url('/images/background.jpg')
+  background: url('/images/background.jpg');
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #container{
@@ -353,7 +353,7 @@ ul li{
 }
 
 ul li.nested{border-bottom: none}
-li.nested span{color: #ccc; cursor: pointer;}
+li.nested span{color: #444; cursor: pointer;}
 li.nested ul{display: none;}
 li.nested:hover ul{display: block;}
 li.separator{
@@ -362,13 +362,6 @@ li.separator{
   height: 25px;
   margin: 0 5px;
 }
-ul li a, ul li a:visited{
-  color: #ccc;
-  text-decoration: none;
-  font-weight: normal;
-}
-
-
 
 .header ul li{
   float: left;
@@ -386,9 +379,6 @@ ul li a, ul li a:visited{
 .header ul li.nested ul.submenu li{
   display: block;  
   float: none;
-}
-#main .body .sidebar-left ul li a:hover{
-  color: #000;
 }
 
 #main .body .sidebar-right{
@@ -450,16 +440,22 @@ ul li a, ul li a:visited{
   max-height: 300px;
 }
 #message-box .message {
-padding: 5px 10px;
-border-top: 1px solid #eee;
+  padding: 5px 10px;
+  border-top: 1px solid #eee;
+  color: #444;
 }
+
+#message-box .admin.message{
+  background: red;
+  color: #FFF;  
+}
+
 #message-box .message .user{
   float: left;
   margin-right: 10px;
-  color: #ccc;
 }
 #message-box .message  .content{float: left;}
-#message-box .message  .date{float: right;color: #eee;}
+#message-box .message  .date{float: right;}
 
 #message-form input{
   height: 20px;
@@ -520,3 +516,11 @@ table.members .checklist.true{cursor: pointer;}
 }
 
 #footer, #footer a{color: #333;text-shadow: 0px 1px 1px #fff;}
+ul li a, ul li a:visited{
+  color: #444;
+  text-decoration: none;
+  font-weight: normal;
+}
+ul li a:hover{
+  color: #09f;
+}
