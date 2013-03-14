@@ -1,5 +1,7 @@
 .header
   = partial '/partials/header'
+  .right 
+    .fancy-button{'data-popup' => '#hidden-popup.add_form_download', rel: "data-popup"} Add New
 .body
   - if current_user.present?
     = partial '/partials/sidebar_left'
@@ -13,6 +15,7 @@
             %li               
               %a{href: l.link, target: "_blank"}= "#{i + 1}. #{l.label}" 
             .clear
-
-    - if ["100002565724713"].include?(current_user.uid) 
-      = partial 'download/form_add_download_link'
+    .clear
+    - if current_user.is_admin?
+      #hidden-popup.add_form_download
+        = partial 'download/form_add_download_link'

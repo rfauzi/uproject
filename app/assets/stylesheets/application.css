@@ -251,6 +251,8 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 .clearfix, .container {display:block;}
 .clear {clear:both;}
 
+/* custom copied */
+.fancy-button{cursor:pointer;text-decoration:none;font:12px/1em 'Droid Sans',sans-serif;font-weight:bold;text-shadow:rgba(255,255,255,.5) 0 1px 0;-webkit-user-select:none;-moz-user-select:none;user-select:none;padding:.5em .6em .4em .6em;margin:.5em;display:inline-block;position:relative;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;border-top:1px solid rgba(255,255,255,0.8);border-bottom:1px solid rgba(0,0,0,0.1);background-image:-webkit-gradient(radial,50% 0,100,50% 0,0,from(rgba(255,255,255,0)),to(rgba(255,255,255,0.7)));background-image:-moz-radial-gradient(top,ellipse cover,rgba(255,255,255,0.7) 0,rgba(255,255,255,0) 100%);background-image:gradient(radial,50% 0,100,50% 0,0,from(rgba(255,255,255,0)),to(rgba(255,255,255,0.7)));-webkit-transition:background .2s ease-in-out;-moz-transition:background .2s ease-in-out;transition:background .2s ease-in-out;color:hsl(0,0%,40%)!important;background-color:hsl(0,0%,75%);-webkit-box-shadow:inset rgba(255,254,255,0.6) 0 .3em .3em,inset rgba(0,0,0,0.15) 0 -0.1em .3em,hsl(0,0%,60%) 0 .1em 3px,hsl(0,0%,45%) 0 .3em 1px,rgba(0,0,0,0.2) 0 .5em 5px;-moz-box-shadow:inset rgba(255,254,255,0.6) 0 .3em .3em,inset rgba(0,0,0,0.15) 0 -0.1em .3em,hsl(0,0%,60%) 0 .1em 3px,hsl(0,0%,45%) 0 .3em 1px,rgba(0,0,0,0.2) 0 .5em 5px;box-shadow:inset rgba(255,254,255,0.6) 0 .3em .3em,inset rgba(0,0,0,0.15) 0 -0.1em .3em,hsl(0,0%,60%) 0 .1em 3px,hsl(0,0%,45%) 0 .3em 1px,rgba(0,0,0,0.2) 0 .5em 5px}
 
 /* print.css */
 body {line-height:1.5;color:#000;background:none;font-size:10pt;}
@@ -381,6 +383,12 @@ li.separator{
   float: none;
 }
 
+#main{
+  box-shadow: 0 1px 0 #D0D0D0, 0 4px 0 #D7D7D7, 0 5px 0 #C1C1C1, 0 6px 4px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0 1px 0 #d0d0d0, 0 4px 0 #d7d7d7, 0 5px 0 #c1c1c1, 0 6px 4px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0 1px 0 #D0D0D0, 0 4px 0 #D7D7D7, 0 5px 0 #C1C1C1, 0 6px 4px rgba(0, 0, 0, 0.17);
+  margin-bottom: 10px;
+}
 #main .body .sidebar-right{
   float: left;
   width: 579px;
@@ -524,3 +532,34 @@ ul li a, ul li a:visited{
 ul li a:hover{
   color: #09f;
 }
+
+#hidden-popup {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  min-width: 300px;
+  border: 1px solid #eee;
+  padding: 10px;
+  box-shadow: 0 1px 0 #D0D0D0, 0 4px 0 #D7D7D7, 0 5px 0 #C1C1C1, 0 6px 4px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0 1px 0 #d0d0d0, 0 4px 0 #d7d7d7, 0 5px 0 #c1c1c1, 0 6px 4px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0 1px 0 #D0D0D0, 0 4px 0 #D7D7D7, 0 5px 0 #C1C1C1, 0 6px 4px rgba(0, 0, 0, 0.17);
+}
+
+#hidden-popup .close{
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ccc;
+  cursor: pointer;
+}
+#hidden-popup form label{
+  font-weight: normal;
+  width: 80px;
+  display: block;
+  float: left;
+}
+
+#hidden-popup.add_form_download

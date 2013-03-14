@@ -8,7 +8,7 @@
       #message-box
         .wrapper
           - @messages.each do |msg|
-            .message{id: "message_#{msg.id}"}
+            .message{id: "message_#{msg.id}", class: msg.user.is_admin? ? "admin" : ""}
               .user= "#{msg.user.username} :"
               .content= msg.message
               .date= msg.created_at.strftime("%d %b, %H:%M")
