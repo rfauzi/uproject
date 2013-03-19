@@ -454,8 +454,9 @@ li.separator{
 }
 
 #message-box .admin.message{
-  background: red;
-  color: #FFF;  
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
 }
 
 #message-box .message .user{
@@ -535,6 +536,7 @@ ul li a:hover{
 
 #hidden-popup {
   display: none;
+  background: #FFF;
   position: absolute;
   top: 40%;
   left: 40%;
