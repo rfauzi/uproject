@@ -31,10 +31,9 @@ class Application
     set :views, settings.root + '/app/views'
     set :public_folder, settings.root + "/app/assets"    
     
-    app_setting = YAML.load_file("#{Dir.pwd}/config/app_secret.yml")[Sinatra::Base.environment.to_s]
-    set :super_admin_uid, app_setting['admin_uid']['super']
-    set :admin_uids, app_setting['admin_uid']['manager']
-    set :facebook_app_id, app_setting['facebook']['app_id']
+    set :super_admin_uid, ENV['UPROJECT_ADMIN'].split(",")
+    set :admin_uids, ENV['UPROJECT_MANAGER'].split(",")
+    set :facebook_app_id, ENV['UPROJECT_FB_APP_ID'].split(",")
 
     use Rack::Session::Pool, :key => 'rack.session'
   end
