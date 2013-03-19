@@ -497,10 +497,10 @@ table.members .checklist.true{cursor: pointer;}
   position: relative;
 }
 
-.wrapper .profile{
+.wrapper .floater-info{
   display: none;
   position: absolute;  
-  width: 100px;
+  min-width: 100px;
   background: #eee;
   right: -100px;
   top: -50px;
@@ -511,9 +511,12 @@ table.members .checklist.true{cursor: pointer;}
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+  z-index: 2;
 }
 
-.wrapper .profile span{
+.wrapper .floater-info.survei{width: 300px; left: -300px;}
+
+.wrapper .floater-info span{
   display: block;
 }
 
@@ -564,4 +567,5 @@ ul li a:hover{
   float: left;
 }
 
-#hidden-popup.add_form_download
+#hidden-popup.add_form_download{}
+

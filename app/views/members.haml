@@ -28,8 +28,9 @@
             %td.wrapper
               - if survei.present? && current_user.is_admin?
                 .floater-info.survei{id: "survei-#{u.id}"}
-                  %span= "#{survei.bahasa_pemograman} level #{survei.skill_level.to_i}"
-                  %span= "ingin menjadi #{survei.cita_cita} atau #{survei.minat_lain}"
+                  %span= "Minat Kursus #{survei.bahasa_pemograman}"
+                  %span= "Pemograman level #{survei.skill_level.to_i}"
+                  %span= "Ingin menjadi #{survei.cita_cita}, Minat lain: #{survei.minat_lain}"
                   %span= "#{(survei.laptop)? "Punya" : "Tidak Punya"} laptop & #{(survei.akses_internet)? "Punya" : "Tidak Punya"} akses internet"
               .checklist{class: survei.present? ? "true" : "false"}
   .clear

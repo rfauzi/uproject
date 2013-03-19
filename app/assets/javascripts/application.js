@@ -85,9 +85,9 @@ function application() {
 
   application.initUserProfile = function(){
     $('.wrapper .checklist.true').hover((function(){
-      $(this).siblings(".profile").slideDown('fast');
+      $(this).siblings(".floater-info").slideDown('fast');
     }), function(){
-      $(this).siblings(".profile").slideUp('fast')
+      $(this).siblings(".floater-info").slideUp('fast')
     })
   }
 
