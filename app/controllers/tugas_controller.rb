@@ -1,6 +1,6 @@
-class TugasController < ApplicationController
+class TugasController < Application
 
   get "/tugas_1" do 
-    haml :'tugas/1', :layout => false
+    haml :'tugas/tugas_1', :layout => false
   end
 end
