@@ -1,13 +1,14 @@
 $(document).ready(function(){
   window.app = new application();
   app.sendMessage();
-  app.initUserProfile();    
+  app.initUserProfile();
+  app.displayPopup();   
 })
 
 
 window.fbAsyncInit = function() {
     FB.init({
-      appId      : '177537562330878', // App ID      
+      appId      : '161569670599063', // App ID
       channelUrl : 'http://ummiproject.herokuapp.com/channel', // Channel File
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
@@ -31,31 +32,42 @@ function application() {
   var application = this;
 
   application.login = function(){
-    FB.login(function(response) {
-      if (response.authResponse) {
-        var _access_token = response.authResponse.accessToken;
-        var _uid = response.authResponse.userID;
-        FB.api('/me', function(response) {
-          var _username = response.username;
-          var _bio = response.bio;
-          var _email = response.email
+    $.ajax({
+      type: "POST",
+      url: "/facebook_auth",
+      beforeSend: function(){$('#loader').show()},
+      complete: function(){$('#loader').hide()},
+      success: function(data){window.location.reload()},
+      error: function(){alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')}
+    });
 
-          $.ajax({
-            type: "POST",
-            url: "/facebook_auth",
-            data: {username: _username, uid: _uid, access_token: _access_token, bio: _bio, email: _email},
-            beforeSend: function(){$('#loader').show()},
-            complete: function(){$('#loader').hide()},
-            success: function(data){$('#main').html(data)},
-            error: function(){alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')}
-          });
-
-        });
-      } else {
-          // cancelled
-      }
-    }, {scope: 'email, publish_actions, read_mailbox'});
   }
+  // application.login = function(){
+  //   FB.login(function(response) {
+  //     if (response.authResponse) {
+  //       var _access_token = response.authResponse.accessToken;
+  //       var _uid = response.authResponse.userID;
+  //       FB.api('/me', function(response) {
+  //         var _username = response.username;
+  //         var _bio = response.bio;
+  //         var _email = response.email
+
+  //         $.ajax({
+  //           type: "POST",
+  //           url: "/facebook_auth",
+  //           data: {username: _username, uid: _uid, access_token: _access_token, bio: _bio, email: _email},
+  //           beforeSend: function(){$('#loader').show()},
+  //           complete: function(){$('#loader').hide()},
+  //           success: function(data){window.location.reload()},
+  //           error: function(){alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')}
+  //         });
+
+  //       });
+  //     } else {
+  //         // cancelled
+  //     }
+  //   }, {scope: 'email, publish_actions, read_mailbox'});
+  // }
 
   application.logout = function(){
     $.ajax({
@@ -63,7 +75,7 @@ function application() {
       url: "/logout",
       beforeSend: function(){$('#loader').show()},
       complete: function(){$('#loader').hide()},
-      success: function(data){$('#main').html(data)},
+      success: function(data){ window.location.reload()},
       error: function(){alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')}
     });
   }
@@ -109,6 +121,18 @@ function application() {
         },
         error: function(){alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')}
       });
+    })
+  }
+
+  application.displayPopup = function(){
+    $('[rel="data-popup"]').live('click', function(){
+      popup_el    = $(this).attr('data-popup');
+      overlay_id  = "popup-overlay"
+      overlay_el  = '<div id='+ overlay_id +'></div>'
+      $('body').append(overlay_el);
+      $(popup_el).show();
+      $("#"+ overlay_id).live('click', function(){$(popup_el).hide(); $(this).remove()})
+      $(popup_el).live('click', function(){event.stopPropagation();})
     })
   }
 }

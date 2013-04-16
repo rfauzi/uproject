@@ -1,0 +1,22 @@
+%form{action: '/courses/create', method: :post}
+  .group
+    %label Lecturer
+    %select{name: 'course[lecturer_id]'}
+      - User.all.map{|u| [u.id, u.username]}.each do |x|
+        %option{value: x[0]}= x[1]
+    .clear
+
+  .group
+    %label Title
+    %input{name: 'course[title]', placeholder: "Title"}
+    .clear
+
+  .group
+    %label Descriptions
+    %input{name: 'course[descriptions]', placeholder: "Description"}
+    .clear
+
+  .group
+    %label 
+    %input{type: 'submit', value: "Submit"}
+    .clear

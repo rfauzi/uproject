@@ -1,41 +1,36 @@
-.header
-  = partial '/partials/header'
-.body
-  = partial '/partials/sidebar_left'
-  .sidebar-right
-    - if @profile.persisted?
-      .group
-        %label Angkatan
-        %span= @profile.angkatan
-      .group
-        %label Semester
-        %span= display_status_mahasiswa(@profile.semester)
-      .group
-        %label Nim
-        %span= @profile.nim
-    - else
-      %form{action: '/profile', method: :post}    
-        .group
-          %label Angkatan
-          %select{name: 'profile[angkatan]'}
-            - (2003..2013).each do |x|
-              %option{value: x}= x
-          .clear
-        .group
-          %label Semester
-          %select{name: 'profile[semester]'}
-            - (1..8).each do |x|              
-              %option{value: x}= x
-              %option{value: 0} Alumni
-          .clear
+- if @profile.persisted?
+  .group
+    %label Angkatan
+    %span= @profile.angkatan
+  .group
+    %label Semester
+    %span= display_status_mahasiswa(@profile.semester)
+  .group
+    %label Nim
+    %span= @profile.nim
+- else
+  %form{action: '/profile', method: :post}    
+    .group
+      %label Angkatan
+      %select{name: 'profile[angkatan]'}
+        - (2003..2013).each do |x|
+          %option{value: x}= x
+      .clear
+    .group
+      %label Semester
+      %select{name: 'profile[semester]'}
+        - (1..8).each do |x|              
+          %option{value: x}= x
+          %option{value: 0} Alumni
+      .clear
 
-        .group
-          %label NIM
-          %input{name: 'profile[nim]', placeholder: "A1B09XXX"}
-          .clear
+    .group
+      %label NIM
+      %input{name: 'profile[nim]', placeholder: "A1B09XXX"}
+      .clear
 
-        .group
-          %label 
-          %input{type: 'submit', value: "Submit"}
-          .clear
-  .clear      
+    .group
+      %label 
+      %input{type: 'submit', value: "Submit"}
+      .clear
+.clear      

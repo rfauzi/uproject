@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 gem 'sinatra'
 gem 'haml', '3.1.7'
-
+gem 'rest-client'
 gem "activerecord"
 gem "sinatra-activerecord"
 

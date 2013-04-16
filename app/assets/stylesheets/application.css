@@ -252,7 +252,7 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 .clear {clear:both;}
 
 /* custom copied */
-.fancy-button{cursor:pointer;text-decoration:none;font:12px/1em 'Droid Sans',sans-serif;font-weight:bold;text-shadow:rgba(255,255,255,.5) 0 1px 0;-webkit-user-select:none;-moz-user-select:none;user-select:none;padding:.5em .6em .4em .6em;margin:.5em;display:inline-block;position:relative;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;border-top:1px solid rgba(255,255,255,0.8);border-bottom:1px solid rgba(0,0,0,0.1);background-image:-webkit-gradient(radial,50% 0,100,50% 0,0,from(rgba(255,255,255,0)),to(rgba(255,255,255,0.7)));background-image:-moz-radial-gradient(top,ellipse cover,rgba(255,255,255,0.7) 0,rgba(255,255,255,0) 100%);background-image:gradient(radial,50% 0,100,50% 0,0,from(rgba(255,255,255,0)),to(rgba(255,255,255,0.7)));-webkit-transition:background .2s ease-in-out;-moz-transition:background .2s ease-in-out;transition:background .2s ease-in-out;color:hsl(0,0%,40%)!important;background-color:hsl(0,0%,75%);-webkit-box-shadow:inset rgba(255,254,255,0.6) 0 .3em .3em,inset rgba(0,0,0,0.15) 0 -0.1em .3em,hsl(0,0%,60%) 0 .1em 3px,hsl(0,0%,45%) 0 .3em 1px,rgba(0,0,0,0.2) 0 .5em 5px;-moz-box-shadow:inset rgba(255,254,255,0.6) 0 .3em .3em,inset rgba(0,0,0,0.15) 0 -0.1em .3em,hsl(0,0%,60%) 0 .1em 3px,hsl(0,0%,45%) 0 .3em 1px,rgba(0,0,0,0.2) 0 .5em 5px;box-shadow:inset rgba(255,254,255,0.6) 0 .3em .3em,inset rgba(0,0,0,0.15) 0 -0.1em .3em,hsl(0,0%,60%) 0 .1em 3px,hsl(0,0%,45%) 0 .3em 1px,rgba(0,0,0,0.2) 0 .5em 5px}
+.fancy-button{float:right;cursor:pointer;text-decoration:none;font:12px/1em 'Droid Sans',sans-serif;font-weight:bold;text-shadow:rgba(255,255,255,.5) 0 1px 0;-webkit-user-select:none;-moz-user-select:none;user-select:none;padding:.5em .6em .4em .6em;margin:.5em;display:inline-block;position:relative;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;border-top:1px solid rgba(255,255,255,0.8);border-bottom:1px solid rgba(0,0,0,0.1);background-image:-webkit-gradient(radial,50% 0,100,50% 0,0,from(rgba(255,255,255,0)),to(rgba(255,255,255,0.7)));background-image:-moz-radial-gradient(top,ellipse cover,rgba(255,255,255,0.7) 0,rgba(255,255,255,0) 100%);background-image:gradient(radial,50% 0,100,50% 0,0,from(rgba(255,255,255,0)),to(rgba(255,255,255,0.7)));-webkit-transition:background .2s ease-in-out;-moz-transition:background .2s ease-in-out;transition:background .2s ease-in-out;color:hsl(0,0%,40%)!important;background-color:hsl(0,0%,75%);-webkit-box-shadow:inset rgba(255,254,255,0.6) 0 .3em .3em,inset rgba(0,0,0,0.15) 0 -0.1em .3em,hsl(0,0%,60%) 0 .1em 3px,hsl(0,0%,45%) 0 .3em 1px,rgba(0,0,0,0.2) 0 .5em 5px;-moz-box-shadow:inset rgba(255,254,255,0.6) 0 .3em .3em,inset rgba(0,0,0,0.15) 0 -0.1em .3em,hsl(0,0%,60%) 0 .1em 3px,hsl(0,0%,45%) 0 .3em 1px,rgba(0,0,0,0.2) 0 .5em 5px;box-shadow:inset rgba(255,254,255,0.6) 0 .3em .3em,inset rgba(0,0,0,0.15) 0 -0.1em .3em,hsl(0,0%,60%) 0 .1em 3px,hsl(0,0%,45%) 0 .3em 1px,rgba(0,0,0,0.2) 0 .5em 5px}
 
 /* print.css */
 body {line-height:1.5;color:#000;background:none;font-size:10pt;}
@@ -369,6 +369,7 @@ li.separator{
   float: left;
   border-bottom: none
 }
+.header ul li.separator{border-top: 1px solid #eee;height: 1px;}
 .header ul li.nested{position: relative;}
 .header ul li.nested ul.submenu{
   background: #fff;
@@ -377,7 +378,10 @@ li.separator{
   -webkit-box-shadow: 3px 2px 5px #ccc;
   -moz-box-shadow: 3px 2px 5px #ccc;
   min-width: 170px;
+  border: 1px solid #eee;
+  z-index: 2;
 }
+.header ul li.nested.pull-right ul.submenu{right: 0; min-width: 120px}
 .header ul li.nested ul.submenu li{
   display: block;  
   float: none;
@@ -389,37 +393,33 @@ li.separator{
   -webkit-box-shadow: 0 1px 0 #D0D0D0, 0 4px 0 #D7D7D7, 0 5px 0 #C1C1C1, 0 6px 4px rgba(0, 0, 0, 0.17);
   margin-bottom: 10px;
 }
-#main .body .sidebar-right{
-  float: left;
-  width: 579px;
-  padding: 0 10px;
-  border-left: 1px solid #eee;
-}
-#main .body .sidebar-right #flash{
+
+#main .body #flash{
   width: 100%;
+  box-sizing: border-box;
 }
-#main .body .sidebar-right form{}
-#main .body .sidebar-right .group {
+
+form .group {
   margin-bottom: 10px;
   border-bottom: 1px solid #efefef;
   padding-bottom: 10px;
 }
 
-#main .body .sidebar-right form .group label{
+form .group label{
   width: 190px;
   display: block;
   float: left;
   min-height: 10px;
 }
 
-#main .body .sidebar-right form .group input, #main .body .sidebar-right form .group textarea{
+form .group input, form .group textarea{
   height: 20px;
   border: 1px solid #ccc;
   width: 220px;
   padding: 4px 5px;
 }
 
-#main .body .sidebar-right form .group input[type="submit"]{
+form .group input[type="submit"]{
   width: auto;
   padding: 10px 30px;
   height: auto;
@@ -427,7 +427,7 @@ li.separator{
   cursor: pointer;
 }
 
-#main .body .sidebar-right form .group input[type="submit"]:hover{
+form .group input[type="submit"]:hover{
   background: #ccc;
   color: white;
 }
@@ -541,14 +541,15 @@ ul li a:hover{
   display: none;
   background: #FFF;
   position: absolute;
-  top: 40%;
-  left: 40%;
-  min-width: 300px;
+  left: 0;
+  right: 0;
+  margin: auto;
   border: 1px solid #eee;
   padding: 10px;
   box-shadow: 0 1px 0 #D0D0D0, 0 4px 0 #D7D7D7, 0 5px 0 #C1C1C1, 0 6px 4px rgba(0, 0, 0, 0.17);
   -moz-box-shadow: 0 1px 0 #d0d0d0, 0 4px 0 #d7d7d7, 0 5px 0 #c1c1c1, 0 6px 4px rgba(0, 0, 0, 0.17);
   -webkit-box-shadow: 0 1px 0 #D0D0D0, 0 4px 0 #D7D7D7, 0 5px 0 #C1C1C1, 0 6px 4px rgba(0, 0, 0, 0.17);
+  z-index: 10;
 }
 
 #hidden-popup .close{
@@ -567,5 +568,21 @@ ul li a:hover{
   float: left;
 }
 
-#hidden-popup.add_form_download{}
+#hidden-popup.add_form_download{
+  height: 200px;
+  width: 425px;
+}
 
+#hidden-popup.form_new_course{
+  width: 500px;
+  height: 200px;
+}
+#popup-overlay{
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  position: absolute;
+  z-index: 9;
+}

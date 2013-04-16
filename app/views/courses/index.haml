@@ -1,0 +1,9 @@
+.fancy-button{'data-popup' => '#hidden-popup.form_new_course', rel: "data-popup"} Add New Course
+- if @courses.present?
+  - @courses.each do |c|
+    %a{href: "/courses/#{c.id}"} c.title
+    %br/
+    = c.descriptions
+
+#hidden-popup.form_new_course
+  = partial '/partials/form_new_course'

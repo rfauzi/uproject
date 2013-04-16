@@ -1,8 +1,8 @@
-class ApplicationController  < Application
+class ApplicationController < Application
 
   ['/matrikulasi', "/members", "/profile", "/download", "/message"].each do |path|
     before path do
-      if session[:login].nil?
+      if current_user.nil?
         session[:flash] = {type: 'warning', message: "Silahkan login Terlebih dahulu"} 
         redirect '/' 
       end
@@ -19,7 +19,8 @@ class ApplicationController  < Application
   end
 
   post "/facebook_auth" do
-    @user = User.where(:uid => params[:uid]).first
+    # @user = User.where(:uid => params[:uid]).first
+    @user = User.first
     unless @user.present?
       @success = User.register_facebook(params)
       @user = User.where(:uid => params[:uid]).first
@@ -35,43 +36,6 @@ class ApplicationController  < Application
     redirect '/'
   end
 
-  get "/matrikulasi" do
-    if current_user.profile.present?
-      @survei = current_user.survei.present? ? current_user.survei : current_user.build_survei
-      haml :matrikulasi      
-    else
-      session[:flash] = {type: 'warning', message: "Silahkan isi profile terlebih dahulu"}
-      redirect '/profile'
-    end
-  end
-
-  post '/matrikulasi' do
-    puts params[:matrikulasi]
-    redirect '/profile' unless current_user.profile.present?
-    @survei = current_user.build_survei(params[:matrikulasi])
-    if @survei.save
-      session[:flash] = {type: 'success', message: "Terima kasih"}
-      redirect '/'
-    else
-      session[:flash] = {type: 'error', message: @survei.errors.full_messages.join(", ")}
-      redirect '/matrikulasi'
-    end
-  end
-
-  get '/profile' do
-    @profile = current_user.profile.present? ? current_user.profile : current_user.build_profile
-    haml :profile
-  end
-
-  post '/profile' do
-    @profile = current_user.build_profile(params[:profile])
-    if @profile.save
-      session[:flash] = {type: 'success', message: "Terima kasih"}
-    else
-      session[:flash] = {type: 'error', message: @profile.errors.full_messages.join(", ")}      
-    end
-    redirect '/profile'
-  end
 
   post '/message' do
     redirect '/' if !request.xhr?
@@ -81,6 +45,7 @@ class ApplicationController  < Application
   end
 
   get '/download' do
+    redirect '/' unless params[:t].present?
     @download_links = DownloadLink.where(link_type: params[:t]) unless params[:t] == "source_code"
     haml :'download/index'
   end
@@ -96,7 +61,5 @@ class ApplicationController  < Application
     redirect '/download'
   end
 
-  get '/members' do
-    haml :members
-  end
+  
 end

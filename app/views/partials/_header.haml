@@ -17,9 +17,20 @@
           %li
             %a{href: '/download?t=elearning'} Learn Online
   .right
-    %a{:href => "javascript:app.logout()"} Logout
+    %ul
+      %li.nested.pull-right
+        %span= current_user.username.capitalize
+        %ul.submenu
+          %li
+            %a{href: '/profile'} Profil
+          %li
+            %a{href: '/matrikulasi'} Matrikulasi
+          %li.separator
+          %li
+            %a{:href => "javascript:app.logout()"} Logout
+    
 - else
   .left
   .right
     %a{:href => "javascript:app.login()"} Login dengan facebook  
-.clear    
+.clear

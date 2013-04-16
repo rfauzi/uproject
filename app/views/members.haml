@@ -1,37 +1,31 @@
-.header
-  = partial '/partials/header'
-.body
-  = partial '/partials/sidebar_left'
-  .sidebar-right
-    %table.members
-      %thead
-        %th{width: '4%'} No.
-        %th{width: '76%'} Username
-        %th{width: '10%'} Profil
-        %th{width: '10%'} Matrikulasi
-      %tbody
-        - User.all.each_with_index do |u, i|
-          - profile = u.profile 
-          - survei  = u.survei
-          %tr
-            %td= "#{i+1}."
-            %td
-              %a{href: "http://facebook.com/#{u.username}"}= u.username
-            %td.wrapper
-              - if profile.present?
-                .floater-info.profile{id: "profile-#{u.id}"}
-                  %img{src: "http://graph.facebook.com/#{u.uid}/picture"}
-                  %span= "Angkatan #{profile.angkatan}"
-                  %span= display_status_mahasiswa(profile.semester)
-                  %span= "Nim #{profile.nim}"
-              .checklist{class: profile.present? ? "true" : "false"}
-            %td.wrapper
-              - if survei.present? && current_user.is_admin?
-                .floater-info.survei{id: "survei-#{u.id}"}
-                  %span= "Minat Kursus #{survei.bahasa_pemograman}"
-                  %span= "Pemograman level #{survei.skill_level.to_i}"
-                  %span= "Ingin menjadi #{survei.cita_cita}, Minat lain: #{survei.minat_lain}"
-                  %span= "#{(survei.laptop)? "Punya" : "Tidak Punya"} laptop & #{(survei.akses_internet)? "Punya" : "Tidak Punya"} akses internet"
-              .checklist{class: survei.present? ? "true" : "false"}
-  .clear
-  
+%table.members
+  %thead
+    %th{width: '4%'} No.
+    %th{width: '76%'} Username
+    %th{width: '10%'} Profil
+    %th{width: '10%'} Matrikulasi
+  %tbody
+    - User.all.each_with_index do |u, i|
+      - profile = u.profile 
+      - survei  = u.survei
+      %tr
+        %td= "#{i+1}."
+        %td
+          %a{href: "http://facebook.com/#{u.username}"}= u.username
+        %td.wrapper
+          - if profile.present?
+            .floater-info.profile{id: "profile-#{u.id}"}
+              %img{src: "http://graph.facebook.com/#{u.uid}/picture"}
+              %span= "Angkatan #{profile.angkatan}"
+              %span= display_status_mahasiswa(profile.semester)
+              %span= "Nim #{profile.nim}"
+          .checklist{class: profile.present? ? "true" : "false"}
+        %td.wrapper
+          - if survei.present? && current_user.is_admin?
+            .floater-info.survei{id: "survei-#{u.id}"}
+              %span= "Minat Kursus #{survei.bahasa_pemograman}"
+              %span= "Pemograman level #{survei.skill_level.to_i}"
+              %span= "Ingin menjadi #{survei.cita_cita}, Minat lain: #{survei.minat_lain}"
+              %span= "#{(survei.laptop)? "Punya" : "Tidak Punya"} laptop & #{(survei.akses_internet)? "Punya" : "Tidak Punya"} akses internet"
+          .checklist{class: survei.present? ? "true" : "false"}
+.clear

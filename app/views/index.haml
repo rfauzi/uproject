@@ -1,19 +1,16 @@
-.header
-  = partial 'partials/header'
-.body
-  - if current_user.present?
-    = partial 'partials/sidebar_left'
-    .sidebar-right
-      %h2 Conversations
-      #message-box
-        .wrapper
-          - @messages.each do |msg|
-            .message{id: "message_#{msg.id}", class: msg.user.is_admin? ? "admin" : ""}
-              .user= "#{msg.user.username} :"
-              .content= msg.message
-              .date= msg.created_at.strftime("%d %b, %H:%M")
-              .clear
-      #message-form
-        %input{class: "message", maxlength: "60"}
-        %input{type: "submit", value: "kirim", class: 'send-message'}
-    .clear
+- if current_user.present?
+  %h2 Conversations
+  #message-box
+    .wrapper
+      - @messages.each do |msg|
+        .message{id: "message_#{msg.id}", class: msg.user.is_admin? ? "admin" : ""}
+          .user= "#{msg.user.username} :"
+          .content= msg.message
+          .date= msg.created_at.strftime("%d %b, %H:%M")
+          .clear
+  #message-form
+    %input{class: "message", maxlength: "85"}
+    %input{type: "submit", value: "kirim", class: 'send-message'}
+  :javascript
+    $('#message-box').animate({ scrollTop: $('#message-box')[0].scrollHeight}, 800);
+.clear
