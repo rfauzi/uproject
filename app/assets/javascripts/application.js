@@ -7,9 +7,9 @@ $(document).ready(function(){
 
 
 window.fbAsyncInit = function() {
+    //  devel: '161569670599063', prod: '177537562330878'
     FB.init({
-      appId      : '177537562330878', // App ID prod
-      // appId      : '161569670599063', // App ID devel
+      appId      : '177537562330878', // App ID
       channelUrl : 'http://ummiproject.herokuapp.com/channel', // Channel File
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
