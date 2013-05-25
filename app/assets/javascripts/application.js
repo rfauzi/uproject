@@ -42,32 +42,32 @@ function application() {
     });
 
   }
-  // application.login = function(){
-  //   FB.login(function(response) {
-  //     if (response.authResponse) {
-  //       var _access_token = response.authResponse.accessToken;
-  //       var _uid = response.authResponse.userID;
-  //       FB.api('/me', function(response) {
-  //         var _username = response.username;
-  //         var _bio = response.bio;
-  //         var _email = response.email
+  application.login = function(){
+    FB.login(function(response) {
+      if (response.authResponse) {
+        var _access_token = response.authResponse.accessToken;
+        var _uid = response.authResponse.userID;
+        FB.api('/me', function(response) {
+          var _username = response.username;
+          var _bio = response.bio;
+          var _email = response.email
 
-  //         $.ajax({
-  //           type: "POST",
-  //           url: "/facebook_auth",
-  //           data: {username: _username, uid: _uid, access_token: _access_token, bio: _bio, email: _email},
-  //           beforeSend: function(){$('#loader').show()},
-  //           complete: function(){$('#loader').hide()},
-  //           success: function(data){window.location.reload()},
-  //           error: function(){alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')}
-  //         });
+          $.ajax({
+            type: "POST",
+            url: "/facebook_auth",
+            data: {username: _username, uid: _uid, access_token: _access_token, bio: _bio, email: _email},
+            beforeSend: function(){$('#loader').show()},
+            complete: function(){$('#loader').hide()},
+            success: function(data){window.location.reload()},
+            error: function(){alert('Terjadi Kesalahan ketika login.. silahkan coba lagi')}
+          });
 
-  //       });
-  //     } else {
-  //         // cancelled
-  //     }
-  //   }, {scope: 'email, publish_actions, read_mailbox'});
-  // }
+        });
+      } else {
+          // cancelled
+      }
+    }, {scope: 'email, publish_actions, read_mailbox'});
+  }
 
   application.logout = function(){
     $.ajax({

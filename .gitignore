@@ -6,4 +6,4 @@
 
 # Ignore bundler config
 /.bundle
-/uproject.db
+uproject.db

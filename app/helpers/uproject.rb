@@ -5,7 +5,7 @@ helpers do
     haml(path.to_sym, :layout => false, :locals => locals)
   end
 
-  def current_user
+  def current_user    
     return session[:login]
   end
 

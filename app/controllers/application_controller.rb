@@ -9,7 +9,7 @@ class ApplicationController < Application
     end
   end
 
-  get "/" do 
+  get "/" do     
     @messages = Message.all
     haml :index, :layout => !request.xhr?
   end
@@ -19,8 +19,7 @@ class ApplicationController < Application
   end
 
   post "/facebook_auth" do
-    # @user = User.where(:uid => params[:uid]).first
-    @user = User.first
+    @user = User.where(:uid => params[:uid]).first    
     unless @user.present?
       @success = User.register_facebook(params)
       @user = User.where(:uid => params[:uid]).first

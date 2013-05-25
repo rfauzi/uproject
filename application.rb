@@ -1,7 +1,9 @@
 require 'sinatra'
 require 'haml'
+require 'redis'
 require "sinatra/activerecord"
 require './app/helpers/uproject'
+enable :sessions
 
 class Application
   %w(models controllers helpers).map { |p| Dir.glob("#{Dir.pwd}/app/#{p}/*.rb") { |m| require "#{m.chomp}" }}
@@ -36,6 +38,11 @@ class Application
     set :facebook_app_id, ENV['UPROJECT_FB_APP_ID'].split(",")
 
     use Rack::Session::Pool, :key => 'rack.session'
+
+    # redis    
+    redisUri = ENV["REDISTOGO_URL"] || 'redis://localhost:6379'
+    uri = URI.parse(redisUri) 
+    REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
   end
 
 end
