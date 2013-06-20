@@ -12,8 +12,8 @@ a img {border:none;}
 :focus {outline:0;}
 
 /* typography.css */
-html {font-size:14px;}
-body {font-size:14px;color:#222;background:#fff;}
+html {font-size:13px;}
+body {font-size:13px;color:#222;background:#fff;}
 h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
 h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
 h2 {font-size:2em;margin-bottom:0.75em;}

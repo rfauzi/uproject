@@ -1,7 +1,7 @@
 class ApplicationController < Application
 
   ['/matrikulasi', "/members", "/profile", "/download", "/message"].each do |path|
-    before path do
+    before path do      
       if current_user.nil?
         session[:flash] = {type: 'warning', message: "Silahkan login Terlebih dahulu"} 
         redirect '/' 

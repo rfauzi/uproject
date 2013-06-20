@@ -25,7 +25,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    redis (3.0.1)
+    rake (10.0.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     ripl (0.7.0)
@@ -61,7 +61,7 @@ DEPENDENCIES
   activerecord
   haml (= 3.1.7)
   pg
-  redis
+  rake
   rest-client
   shotgun
   sinatra

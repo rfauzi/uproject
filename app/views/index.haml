@@ -3,8 +3,10 @@
   #message-box
     .wrapper
       - @messages.each do |msg|
-        .message{id: "message_#{msg.id}", class: msg.user.is_admin? ? "admin" : ""}
-          .user= "#{msg.user.username} :"
+        / .message{id: "message_#{msg.id}", class: msg.user.is_admin? ? "admin" : ""}
+        - puts "------------message id:#{msg.user_id}, message user: #{msg.user}"
+        .message{id: "message_#{msg.id}"}
+          .user= "#{msg.user.try(:username)} :"
           .content= msg.message
           .date= msg.created_at.strftime("%d %b, %H:%M")
           .clear

@@ -1,0 +1,318 @@
+messages_1:
+  id: 1
+  user_id: 1
+  message: test message
+  created_at: 2013-03-10 19:21:31.035693 +07:00
+  updated_at: 2013-03-10 19:21:31.035693 +07:00
+messages_2:
+  id: 2
+  user_id: 1
+  message: change timezone
+  created_at: 2013-03-11 02:27:03.535049 +07:00
+  updated_at: 2013-03-11 02:27:03.535049 +07:00
+messages_3:
+  id: 3
+  user_id: 1
+  message: test
+  created_at: 2013-03-11 09:58:47.428548 +07:00
+  updated_at: 2013-03-11 09:58:47.428548 +07:00
+messages_4:
+  id: 4
+  user_id: 2
+  message: tesss
+  created_at: 2013-03-11 15:10:40.454269 +07:00
+  updated_at: 2013-03-11 15:10:40.454269 +07:00
+messages_5:
+  id: 5
+  user_id: 2
+  message: "simpel tapi kerenn... :D "
+  created_at: 2013-03-11 16:03:51.957757 +07:00
+  updated_at: 2013-03-11 16:03:51.957757 +07:00
+messages_6:
+  id: 6
+  user_id: 1
+  message: kalau ada yg kurang2 silahkan kasih komentar nya disini  :P
+  created_at: 2013-03-11 21:26:06.704429 +07:00
+  updated_at: 2013-03-11 21:26:06.704429 +07:00
+messages_7:
+  id: 7
+  user_id: 9
+  message: nice nice
+  created_at: 2013-03-11 22:31:01.807789 +07:00
+  updated_at: 2013-03-11 22:31:01.807789 +07:00
+messages_8:
+  id: 8
+  user_id: 10
+  message: snhfgngf
+  created_at: 2013-03-11 22:49:20.287704 +07:00
+  updated_at: 2013-03-11 22:49:20.287704 +07:00
+messages_9:
+  id: 9
+  user_id: 10
+  message: dfwghjrejy dyrjrjdjgdfjtrj
+  created_at: 2013-03-11 22:51:28.262075 +07:00
+  updated_at: 2013-03-11 22:51:28.262075 +07:00
+messages_10:
+  id: 10
+  user_id: 6
+  message: "tester "
+  created_at: 2013-03-11 23:28:18.932799 +07:00
+  updated_at: 2013-03-11 23:28:18.932799 +07:00
+messages_11:
+  id: 11
+  user_id: 2
+  message: ayo di isi Matrikulasix
+  created_at: 2013-03-11 23:29:06.320594 +07:00
+  updated_at: 2013-03-11 23:29:06.320594 +07:00
+messages_12:
+  id: 12
+  user_id: 7
+  message: wow nice2
+  created_at: 2013-03-12 00:12:05.022120 +07:00
+  updated_at: 2013-03-12 00:12:05.022120 +07:00
+messages_12:
+  id: 13
+  user_id: 7
+  message: wow nice2
+  created_at: 2013-03-12 00:12:05.436194 +07:00
+  updated_at: 2013-03-12 00:12:05.436194 +07:00
+messages_13:
+  id: 14
+  user_id: 17
+  message: ikutan test :)
+  created_at: 2013-03-12 09:20:16.154981 +07:00
+  updated_at: 2013-03-12 09:20:16.154981 +07:00
+messages_14:
+  id: 15
+  user_id: 21
+  message: ??
+  created_at: 2013-03-12 23:15:23.094666 +07:00
+  updated_at: 2013-03-12 23:15:23.094666 +07:00
+messages_15:
+  id: 16
+  user_id: 1
+  message: "*update: 1. ganti posisi menu. 2. menu tambahan utl download"
+  created_at: 2013-03-13 00:19:07.237183 +07:00
+  updated_at: 2013-03-13 00:19:07.237183 +07:00
+messages_16:
+  id: 17
+  user_id: 1
+  message: "menu download ada 3 bagian. "
+  created_at: 2013-03-13 00:20:14.134890 +07:00
+  updated_at: 2013-03-13 00:20:14.134890 +07:00
+messages_17:
+  id: 18
+  user_id: 1
+  message: "1. This web source code: yaitu source code web ini"
+  created_at: 2013-03-13 00:20:32.964208 +07:00
+  updated_at: 2013-03-13 00:20:32.964208 +07:00
+messages_18:
+  id: 19
+  user_id: 1
+  message: "2. Ebook - link2 ebook yg berhubungan dengan pemograman "
+  created_at: 2013-03-13 00:20:51.241396 +07:00
+  updated_at: 2013-03-13 00:20:51.241396 +07:00
+messages_19:
+  id: 20
+  user_id: 1
+  message: 3. Elearning - Link2 yg brhubungan dgn Elearning  IT, dsb
+  created_at: 2013-03-13 00:21:40.090057 +07:00
+  updated_at: 2013-03-13 00:21:40.090057 +07:00
+messages_20:
+  id: 21
+  user_id: 24
+  message: cek
+  created_at: 2013-03-13 16:57:17.525278 +07:00
+  updated_at: 2013-03-13 16:57:17.525278 +07:00
+messages_21:
+  id: 22
+  user_id: 2
+  message: tambh kang, tq Elearning - http://www.codeschool.com/
+  created_at: 2013-03-13 22:27:50.065490 +07:00
+  updated_at: 2013-03-13 22:27:50.065490 +07:00
+messages_22:
+  id: 23
+  user_id: 28
+  message: hai :)
+  created_at: 2013-03-14 09:27:14.304017 +07:00
+  updated_at: 2013-03-14 09:27:14.304017 +07:00
+messages_23:
+  id: 24
+  user_id: 32
+  message: perpaduan warna nya kang.
+  created_at: 2013-03-14 21:44:02.022563 +07:00
+  updated_at: 2013-03-14 21:44:02.022563 +07:00
+messages_24:
+  id: 25
+  user_id: 1
+  message: "@raynoe udh d tmbahin @aliffuu kl bs buatin design ny dnk :P"
+  created_at: 2013-03-14 22:27:01.520389 +07:00
+  updated_at: 2013-03-14 22:27:01.520389 +07:00
+messages_25:
+  id: 26
+  user_id: 26
+  message: salah masukan angkatan dan semester gmana atuh kang ? :P
+  created_at: 2013-03-18 13:42:35.694492 +07:00
+  updated_at: 2013-03-18 13:42:35.694492 +07:00
+messages_26:
+  id: 27
+  user_id: 2
+  message: "Simfimz @ gpp :D "
+  created_at: 2013-03-18 17:56:08.122241 +07:00
+  updated_at: 2013-03-18 17:56:08.122241 +07:00
+messages_27:
+  id: 28
+  user_id: 1
+  message: "@simfimz yg bner hrsnya gmn? *itu sengaja g bs d edit :D"
+  created_at: 2013-03-19 06:34:40.701919 +07:00
+  updated_at: 2013-03-19 06:34:40.701919 +07:00
+messages_28:
+  id: 29
+  user_id: 26
+  message: semester 2 angkatan 2012 kang
+  created_at: 2013-03-19 08:36:41.919567 +07:00
+  updated_at: 2013-03-19 08:36:41.919567 +07:00
+messages_29:
+  id: 30
+  user_id: 38
+  message: tes... :)
+  created_at: 2013-03-20 12:11:55.119489 +07:00
+  updated_at: 2013-03-20 12:11:55.119489 +07:00
+messages_30:
+  id: 31
+  user_id: 1
+  message: "@simfimz udah di update.. @asriyanik eh ada bu aci.. :P"
+  created_at: 2013-03-20 20:32:25.536101 +07:00
+  updated_at: 2013-03-20 20:32:25.536101 +07:00
+messages_31:
+  id: 32
+  user_id: 1
+  message: "modul utk kursus ruby: http://goo.gl/AQnX1 *blm beres :D"
+  created_at: 2013-03-20 21:17:44.467115 +07:00
+  updated_at: 2013-03-20 21:17:44.467115 +07:00
+messages_32:
+  id: 33
+  user_id: 5
+  message: kreennnn
+  created_at: 2013-03-20 21:24:12.744780 +07:00
+  updated_at: 2013-03-20 21:24:12.744780 +07:00
+messages_33:
+  id: 34
+  user_id: 1
+  message: kang alam modul ny mn atuh? share disini :D
+  created_at: 2013-03-20 21:36:06.639357 +07:00
+  updated_at: 2013-03-20 21:36:06.639357 +07:00
+messages_34:
+  id: 35
+  user_id: 7
+  message: wah,,dah ada lagi modulnya..cepet, ana baru bab 3
+  created_at: 2013-03-20 21:58:21.439465 +07:00
+  updated_at: 2013-03-20 21:58:21.439465 +07:00
+messages_35:
+  id: 36
+  user_id: 2
+  message: semngattt !!! :D :D
+  created_at: 2013-03-20 22:07:47.998356 +07:00
+  updated_at: 2013-03-20 22:07:47.998356 +07:00
+messages_36:
+  id: 37
+  user_id: 1
+  message: "@deviff baru 1 hal vi.. nyicil.. :)) dtagih c @rayni mlu :P "
+  created_at: 2013-03-20 22:18:21.038890 +07:00
+  updated_at: 2013-03-20 22:18:21.038890 +07:00
+messages_37:
+  id: 38
+  user_id: 43
+  message: asalamu'alaikum
+  created_at: 2013-03-20 22:24:53.592376 +07:00
+  updated_at: 2013-03-20 22:24:53.592376 +07:00
+messages_38:
+  id: 39
+  user_id: 7
+  message: "@kubido :  hoo,,iya,,ternyata buat modul sedikit melelahkan."
+  created_at: 2013-03-20 22:39:57.541225 +07:00
+  updated_at: 2013-03-20 22:39:57.541225 +07:00
+messages_39:
+  id: 40
+  user_id: 7
+  message: "@kubido :  hoo,,iya,,ternyata buat modul sedikit melelahkan."
+  created_at: 2013-03-20 22:39:58.409876 +07:00
+  updated_at: 2013-03-20 22:39:58.409876 +07:00
+messages_40:
+  id: 41
+  user_id: 7
+  message: "@kubido :  hoo,,iya,,ternyata buat modul sedikit melelahkan."
+  created_at: 2013-03-20 22:39:59.101203 +07:00
+  updated_at: 2013-03-20 22:39:59.101203 +07:00
+messages_41:
+  id: 42
+  user_id: 7
+  message: ini pake sinatra keren juga and cepet dah bgus lagi...
+  created_at: 2013-03-20 22:41:27.021380 +07:00
+  updated_at: 2013-03-20 22:41:27.021380 +07:00
+messages_42:
+  id: 43
+  user_id: 7
+  message: (y)(y)...
+  created_at: 2013-03-20 22:41:51.973495 +07:00
+  updated_at: 2013-03-20 22:41:51.973495 +07:00
+messages_43:
+  id: 44
+  user_id: 14
+  message: hoyong tiasa kang Ruby. hehehe
+  created_at: 2013-03-21 20:23:49.467240 +07:00
+  updated_at: 2013-03-21 20:23:49.467240 +07:00
+messages_44:
+  id: 45
+  user_id: 48
+  message: test :D
+  created_at: 2013-03-23 15:14:24.798268 +07:00
+  updated_at: 2013-03-23 15:14:24.798268 +07:00
+messages_45:
+  id: 46
+  user_id: 49
+  message: waktu tidur mimpi mahir RUbY
+  created_at: 2013-03-24 15:29:50.878103 +07:00
+  updated_at: 2013-03-24 15:29:50.878103 +07:00
+messages_46:
+  id: 47
+  user_id: 28
+  message: perintah buat instal ruby on rails di linux gmn??
+  created_at: 2013-03-25 20:21:42.426384 +07:00
+  updated_at: 2013-03-25 20:21:42.426384 +07:00
+messages_47:
+  id: 48
+  user_id: 28
+  message: sudo apt-get ruby1.9.3    gtu bkn???
+  created_at: 2013-03-25 20:22:05.011420 +07:00
+  updated_at: 2013-03-25 20:22:05.011420 +07:00
+messages_48:
+  id: 49
+  user_id: 2
+  message: "Maulanajimat @ buka link ini => http://bit.ly/LdhYrE   "
+  created_at: 2013-03-26 08:58:22.681172 +07:00
+  updated_at: 2013-03-26 08:58:22.681172 +07:00
+messages_49:
+  id: 50
+  user_id: 2
+  message: "Maulanajimat @ pake RMV . "
+  created_at: 2013-03-26 08:58:42.058392 +07:00
+  updated_at: 2013-03-26 08:58:42.058392 +07:00
+messages_50:
+  id: 51
+  user_id: 1
+  message: "@raynoe RVM mungkin :P *ruby versioning manager"
+  created_at: 2013-03-28 10:00:50.734492 +07:00
+  updated_at: 2013-03-28 10:00:50.734492 +07:00
+messages_51:
+  id: 52
+  user_id: 2
+  message: "kng Kubid @ haha oia salah.. wkwk "
+  created_at: 2013-03-31 13:47:26.946315 +07:00
+  updated_at: 2013-03-31 13:47:26.946315 +07:00
+messages_52:
+  id: 53
+  user_id: 1
+  message: test... tampilan baru, setelah login header d atas gak muncul. mesti di refresh :)
+  created_at: 2013-05-14 09:44:12.078804 +07:00
+  updated_at: 2013-05-14 09:44:12.078804 +07:00

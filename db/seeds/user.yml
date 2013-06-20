@@ -1,0 +1,420 @@
+user_1:
+  id: 1
+  username: kubido
+  email: kubid@galau.in
+  descriptions: I am a capitalist in mind...but a socialist at heart
+  created_at: 2013-03-10 19:21:19.738059 +07:00
+  updated_at: 2013-03-10 19:21:19.738059 +07:00
+  uid: "100002565724713"
+  access_token:
+user_2:
+  id: 2
+  username: raynoe
+  email: mindtrick.lxd@gmail.com
+  descriptions:
+  created_at: 2013-03-11 08:52:03.652345 +07:00
+  updated_at: 2013-03-11 08:52:03.652345 +07:00
+  uid: "1281052727"
+  access_token:
+user_3:
+  id: 4
+  username: azunk.elnino
+  email: zunk12@ymail.com
+  descriptions:
+  created_at: 2013-03-11 21:20:49.466734 +07:00
+  updated_at: 2013-03-11 21:20:49.466734 +07:00
+  uid: "100000194270566"
+  access_token:
+user_4:
+  id: 5
+  username: natureza.trone
+  email: alamtopani@yahoo.com
+  descriptions: Life has to continue...!!
+  created_at: 2013-03-11 22:14:51.980434 +07:00
+  updated_at: 2013-03-11 22:14:51.980434 +07:00
+  uid: "1673524840"
+  access_token:
+user_5:
+  id: 8
+  username: Parman.Wintara
+  email: par_aza@yahoo.com
+  descriptions: Simple..
+  created_at: 2013-03-11 22:23:16.972400 +07:00
+  updated_at: 2013-03-11 22:23:16.972400 +07:00
+  uid: "1397664195"
+  access_token:
+user_6:
+  id: 9
+  username: mochamad.suprayogie
+  email: avanza_cs1@rocketmail.com
+  descriptions:
+  created_at: 2013-03-11 22:28:32.333559 +07:00
+  updated_at: 2013-03-11 22:28:32.333559 +07:00
+  uid: "1726103022"
+  access_token:
+user_7:
+  id: 6
+  username: fathan.basinda
+  email: doctor.fathan@gmail.com
+  descriptions:
+  created_at: 2013-03-11 22:21:17.867284 +07:00
+  updated_at: 2013-03-11 22:33:40.409136 +07:00
+  uid: "100000321441958"
+  access_token:
+user_8:
+  id: 7
+  username: deviff
+  email:
+  descriptions:
+  created_at: 2013-03-11 22:21:58.226604 +07:00
+  updated_at: 2013-03-11 22:34:03.929073 +07:00
+  uid: "1662375128"
+  access_token:
+user_9:
+  id: 10
+  username: kelundsunarya
+  email: suherlannurmilahfazrin@yahoo.co.id
+  descriptions:
+  created_at: 2013-03-11 22:48:06.983863 +07:00
+  updated_at: 2013-03-11 22:48:06.983863 +07:00
+  uid: "100000535595770"
+  access_token:
+user_10:
+  id: 11
+  username: adam.afa.vanility
+  email: afainspiration@yahoo.com
+  descriptions:
+  created_at: 2013-03-12 00:30:55.378823 +07:00
+  updated_at: 2013-03-12 00:30:55.378823 +07:00
+  uid: "100002490843271"
+  access_token:
+user_11:
+  id: 12
+  username: israj.alwan.haliri
+  email: bochex93@gmail.com
+  descriptions:
+  created_at: 2013-03-12 04:02:31.198000 +07:00
+  updated_at: 2013-03-12 04:02:31.198000 +07:00
+  uid: "100000269341544"
+  access_token:
+user_12:
+  id: 13
+  username: yogimardilah
+  email: mardilahdbc@gmail.com
+  descriptions: "Garam asi\xC3\xB1, gula manis."
+  created_at: 2013-03-12 05:47:44.510482 +07:00
+  updated_at: 2013-03-12 05:47:44.510482 +07:00
+  uid: "100000180399287"
+  access_token:
+user_13:
+  id: 14
+  username: dtakiii
+  email: fadlys3@gmail.com
+  descriptions:
+  created_at: 2013-03-12 07:40:19.162371 +07:00
+  updated_at: 2013-03-12 07:40:19.162371 +07:00
+  uid: "100001610006433"
+  access_token:
+user_14:
+  id: 15
+  username: zhals96
+  email: zal_blue@rocketmail.com
+  descriptions:
+  created_at: 2013-03-12 07:57:34.896846 +07:00
+  updated_at: 2013-03-12 07:57:34.896846 +07:00
+  uid: "100001265032937"
+  access_token:
+user_15:
+  id: 16
+  username: kzk87
+  email: kizkilovecheese@gmail.com
+  descriptions:
+  created_at: 2013-03-12 08:03:26.322357 +07:00
+  updated_at: 2013-03-12 08:03:26.322357 +07:00
+  uid: "1570175511"
+  access_token:
+user_16:
+  id: 17
+  username: giblartar.thexplorer
+  email: giblartar_tea@yahoo.co.id
+  descriptions: resep popotosn sareng sapedahan
+  created_at: 2013-03-12 09:19:40.193955 +07:00
+  updated_at: 2013-03-12 09:19:40.193955 +07:00
+  uid: "1285086226"
+  access_token:
+user_17:
+  id: 18
+  username: firman.wisambudi
+  email: saylight_forever@yahoo.co.id
+  descriptions: Q org yg tak bisa nrima k'kerungan orlin scra smpurna,,tak prnah brpkir 2,,smpai Q sring mnyesal!,,
+  created_at: 2013-03-12 11:52:38.953935 +07:00
+  updated_at: 2013-03-12 11:52:38.953935 +07:00
+  uid: "100001768237970"
+  access_token:
+user_18:
+  id: 19
+  username: reza.a.iniesta
+  email: reza_fikri99@yahoo.com
+  descriptions:
+  created_at: 2013-03-12 16:15:36.481013 +07:00
+  updated_at: 2013-03-12 16:15:36.481013 +07:00
+  uid: "100000151795890"
+  access_token:
+user_19:
+  id: 20
+  username: nkzdhe
+  email: nkzdhe@gmail.com
+  descriptions:
+  created_at: 2013-03-12 18:12:19.512375 +07:00
+  updated_at: 2013-03-12 18:12:19.512375 +07:00
+  uid: "100000115441035"
+  access_token:
+user_20:
+  id: 21
+  username: profesor.akhir
+  email: www.san.akhir@gmail.com
+  descriptions: |-
+    Jangan pernah menyerah,, Yakinlah kelak kesempatan itu pasti kan datag kembali,,
+    ''aku pasti bisa!!!"
+
+    sandriakhir@in.com
+  created_at: 2013-03-12 23:14:23.095369 +07:00
+  updated_at: 2013-03-12 23:14:23.095369 +07:00
+  uid: "1671330192"
+  access_token:
+user_21:
+  id: 22
+  username: megulair.dhie
+  email: streetglowmachine@yahoo.co.id
+  descriptions:
+  created_at: 2013-03-13 09:02:12.802285 +07:00
+  updated_at: 2013-03-13 09:02:12.802285 +07:00
+  uid: "100003394779182"
+  access_token:
+user_22:
+  id: 23
+  username: devapepe
+  email: fajar_dev@yahoo.co.id
+  descriptions:
+  created_at: 2013-03-13 09:18:36.889516 +07:00
+  updated_at: 2013-03-13 09:18:36.889516 +07:00
+  uid: "1385894622"
+  access_token:
+user_23:
+  id: 24
+  username: dmcshadow49
+  email: dhayu.redarmy@gmail.com
+  descriptions:
+  created_at: 2013-03-13 16:56:54.239927 +07:00
+  updated_at: 2013-03-13 16:56:54.239927 +07:00
+  uid: "100001239781320"
+  access_token:
+user_24:
+  id: 25
+  username: zhiez.varium
+  email: abdulaziz16942@yahoo.co.id
+  descriptions:
+  created_at: 2013-03-13 21:31:10.940468 +07:00
+  updated_at: 2013-03-13 21:31:10.940468 +07:00
+  uid: "100004404611410"
+  access_token:
+user_25:
+  id: 26
+  username: simfimz
+  email: firmanabdul89@yahoo.com
+  descriptions:
+  created_at: 2013-03-14 05:37:51.689163 +07:00
+  updated_at: 2013-03-14 05:37:51.689163 +07:00
+  uid: "100001643512132"
+  access_token:
+user_26:
+  id: 27
+  username: sandi.ctiger1
+  email: sandi_putikawa@yahoo.co.id
+  descriptions: I LOVE YOU HONEY
+  created_at: 2013-03-14 08:38:08.682109 +07:00
+  updated_at: 2013-03-14 08:38:08.682109 +07:00
+  uid: "100000186345371"
+  access_token:
+user_27:
+  id: 28
+  username: maulanajimat
+  email: smkfajarkencana123@gmail.com
+  descriptions:
+  created_at: 2013-03-14 09:23:46.554525 +07:00
+  updated_at: 2013-03-14 09:23:46.554525 +07:00
+  uid: "100000471267850"
+  access_token:
+user_28:
+  id: 29
+  username: mohammad.adhipradana
+  email: aiyawae@gmail.com
+  descriptions: |-
+    a MUSLIM, Movie Addict, Adrenaline Junky, Less Massculine Guy, Back Packer.. and ofcourse, a Compatible Friend. :)
+    #IndonesiaTanpaJIL Activist
+  created_at: 2013-03-14 09:55:40.261444 +07:00
+  updated_at: 2013-03-14 09:55:40.261444 +07:00
+  uid: "694277634"
+  access_token:
+user_29:
+  id: 30
+  username: adammuslim48
+  email: adam_muslim@rocketmail.com
+  descriptions:
+  created_at: 2013-03-14 13:09:23.130142 +07:00
+  updated_at: 2013-03-14 13:09:23.130142 +07:00
+  uid: "100002582666974"
+  access_token:
+user_30:
+  id: 31
+  username: profesordimazius
+  email: dimaz_seville@yahoo.com
+  descriptions:
+  created_at: 2013-03-14 17:31:18.057686 +07:00
+  updated_at: 2013-03-14 17:31:18.057686 +07:00
+  uid: "1429284643"
+  access_token:
+user_31:
+  id: 32
+  username: aliifuu
+  email: liefalghifari@yahoo.co.id
+  descriptions:
+  created_at: 2013-03-14 18:57:38.470704 +07:00
+  updated_at: 2013-03-14 18:57:38.470704 +07:00
+  uid: "100000089384222"
+  access_token:
+user_32:
+  id: 35
+  username: eninuraeni80
+  email: eninuraeni80@yahoo.co.id
+  descriptions:
+  created_at: 2013-03-15 21:31:11.118871 +07:00
+  updated_at: 2013-03-15 21:31:11.118871 +07:00
+  uid: "100000491186276"
+  access_token:
+user_33:
+  id: 36
+  username: rani.kusumawardani.1
+  email: zera_cutie01@yahoo.co.id
+  descriptions: selalu suka pelangi ^^
+  created_at: 2013-03-15 22:40:51.107768 +07:00
+  updated_at: 2013-03-15 22:40:51.107768 +07:00
+  uid: "100000314403350"
+  access_token:
+user_34:
+  id: 37
+  username: yaya.sabtian
+  email: rayasa_01@yahoo.co.id
+  descriptions:
+  created_at: 2013-03-16 05:17:03.688566 +07:00
+  updated_at: 2013-03-16 05:17:03.688566 +07:00
+  uid: "1308440624"
+  access_token:
+user_35:
+  id: 38
+  username: asriyanik
+  email: asriyanik86@gmail.com
+  descriptions:
+  created_at: 2013-03-20 12:07:47.033417 +07:00
+  updated_at: 2013-03-20 12:07:47.033417 +07:00
+  uid: "1287187357"
+  access_token:
+user_36:
+  id: 39
+  username: FraulinNewton
+  email: annisa.novelita@yahoo.com
+  descriptions:
+  created_at: 2013-03-20 12:53:10.969862 +07:00
+  updated_at: 2013-03-20 12:53:10.969862 +07:00
+  uid: "100000103201859"
+  access_token:
+user_37:
+  id: 40
+  username: reni.rusmiyanti
+  email: sangpembebas2@gmail.com
+  descriptions:
+  created_at: 2013-03-20 21:24:44.632377 +07:00
+  updated_at: 2013-03-20 21:24:44.632377 +07:00
+  uid: "100003160368699"
+  access_token:
+user_38:
+  id: 41
+  username: septian.genetika
+  email: septiangenetika@yahoo.co.id
+  descriptions: Jngan prnah mersa putus asa truslah berusaha
+  created_at: 2013-03-20 21:30:24.142172 +07:00
+  updated_at: 2013-03-20 21:30:24.142172 +07:00
+  uid: "100002066454263"
+  access_token:
+user_39:
+  id: 42
+  username: siizill
+  email: redye@windowslive.com
+  descriptions:
+  created_at: 2013-03-20 22:02:54.946890 +07:00
+  updated_at: 2013-03-20 22:02:54.946890 +07:00
+  uid: "1284178363"
+  access_token:
+user_40:
+  id: 43
+  username: foejie.matiks
+  email: de_foejie@yahoo.com
+  descriptions:
+  created_at: 2013-03-20 22:23:53.735416 +07:00
+  updated_at: 2013-03-20 22:23:53.735416 +07:00
+  uid: "100000152478864"
+  access_token:
+user_41:
+  id: 44
+  username: ricky.traverz
+  email: theciply@yahoo.com
+  descriptions:
+  created_at: 2013-03-21 10:53:35.695820 +07:00
+  updated_at: 2013-03-21 10:53:35.695820 +07:00
+  uid: "100000416288247"
+  access_token:
+user_42:
+  id: 45
+  username: rizalbobotoh
+  email: rizalbobotoh@yahoo.co.id
+  descriptions:
+  created_at: 2013-03-21 14:51:14.911460 +07:00
+  updated_at: 2013-03-21 14:51:14.911460 +07:00
+  uid: "100000116332711"
+  access_token:
+user_43:
+  id: 46
+  username: unggugsemesta
+  email: whoami.unggu@gmail.com
+  descriptions:
+  created_at: 2013-03-21 19:20:04.015006 +07:00
+  updated_at: 2013-03-21 19:20:04.015006 +07:00
+  uid: "1443558989"
+  access_token:
+user_44:
+  id: 47
+  username: pep.stoner
+  email: dela_rafadafa@yahoo.com
+  descriptions:
+  created_at: 2013-03-21 23:19:25.205110 +07:00
+  updated_at: 2013-03-21 23:19:25.205110 +07:00
+  uid: "1289780433"
+  access_token:
+user_45:
+  id: 48
+  username: reeverock
+  email: itsmyp@in.com
+  descriptions: C:\Program Files\Unknown Program\$$$\noaccess.exe
+  created_at: 2013-03-23 15:08:55.293534 +07:00
+  updated_at: 2013-03-23 15:08:55.293534 +07:00
+  uid: "100000008962938"
+  access_token: ""
+user_46:
+  id: 49
+  username: mifta.boucool
+  email: rizqimifta313@ymail.com
+  descriptions:
+  created_at: 2013-03-24 15:25:47.015045 +07:00
+  updated_at: 2013-03-24 15:25:47.015045 +07:00
+  uid: "100005555674270"
+  access_token: ""

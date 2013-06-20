@@ -1,0 +1,256 @@
+profile_1:
+  id: 1
+  user_id: 2
+  angkatan: 2011
+  semester: 4
+  nim: 013051111078
+  created_at: 2013-03-11 09:48:13.219192 +07:00
+  updated_at: 2013-03-11 09:48:13.219192 +07:00
+profile_2:
+  id: 3
+  user_id: 4
+  angkatan: 2010
+  semester: 6
+  nim: A1B1001065
+  created_at: 2013-03-11 21:21:24.210753 +07:00
+  updated_at: 2013-03-11 21:21:24.210753 +07:00
+profile_3:
+  id: 4
+  user_id: 10
+  angkatan: 2011
+  semester: 4
+  nim: 039
+  created_at: 2013-03-11 22:50:57.491759 +07:00
+  updated_at: 2013-03-11 22:50:57.491759 +07:00
+profile_4:
+  id: 2
+  user_id: 1
+  angkatan: 2005
+  semester: 0
+  nim: A1B05046
+  created_at: 2013-03-11 20:29:29.307954 +07:00
+  updated_at: 2013-03-11 22:58:17.607681 +07:00
+profile_5:
+  id: 5
+  user_id: 7
+  angkatan: 2008
+  semester: 0
+  nim: A1B0801085
+  created_at: 2013-03-11 23:16:50.236020 +07:00
+  updated_at: 2013-03-11 23:16:50.236020 +07:00
+profile_6:
+  id: 6
+  user_id: 6
+  angkatan: 2011
+  semester: 4
+  nim: 013051111029
+  created_at: 2013-03-11 23:28:48.245000 +07:00
+  updated_at: 2013-03-11 23:28:48.245000 +07:00
+profile_7:
+  id: 7
+  user_id: 13
+  angkatan: 2011
+  semester: 4
+  nim: "013051111016"
+  created_at: 2013-03-12 05:52:20.359724 +07:00
+  updated_at: 2013-03-12 05:52:20.359724 +07:00
+profile_8:
+  id: 8
+  user_id: 14
+  angkatan: 2012
+  semester: 1
+  nim: "013051211067"
+  created_at: 2013-03-12 07:44:41.471342 +07:00
+  updated_at: 2013-03-12 07:44:41.471342 +07:00
+profile_9:
+  id: 9
+  user_id: 15
+  angkatan: 2011
+  semester: 4
+  nim: "013051111072"
+  created_at: 2013-03-12 07:58:34.462508 +07:00
+  updated_at: 2013-03-12 07:58:34.462508 +07:00
+profile_10:
+  id: 10
+  user_id: 18
+  angkatan: 2011
+  semester: 4
+  nim: 013051111068
+  created_at: 2013-03-12 11:53:11.084916 +07:00
+  updated_at: 2013-03-12 11:53:11.084916 +07:00
+profile_11:
+  id: 11
+  user_id: 19
+  angkatan: 2010
+  semester: 6
+  nim: A1B1001078
+  created_at: 2013-03-12 16:16:28.177757 +07:00
+  updated_at: 2013-03-12 16:16:28.177757 +07:00
+profile_12:
+  id: 12
+  user_id: 21
+  angkatan: 2010
+  semester: 6
+  nim: A1B1001076
+  created_at: 2013-03-12 23:15:58.740115 +07:00
+  updated_at: 2013-03-12 23:15:58.740115 +07:00
+profile_13:
+  id: 13
+  user_id: 23
+  angkatan: 2010
+  semester: 6
+  nim: A1B1001049
+  created_at: 2013-03-13 09:19:27.951518 +07:00
+  updated_at: 2013-03-13 09:19:27.951518 +07:00
+profile_14:
+  id: 14
+  user_id: 24
+  angkatan: 2011
+  semester: 4
+  nim: "013051111036"
+  created_at: 2013-03-13 16:58:04.534510 +07:00
+  updated_at: 2013-03-13 16:58:04.534510 +07:00
+profile_15:
+  id: 16
+  user_id: 28
+  angkatan: 2010
+  semester: 6
+  nim: A1B1001047
+  created_at: 2013-03-14 09:24:42.566848 +07:00
+  updated_at: 2013-03-14 09:24:42.566848 +07:00
+profile_16:
+  id: 17
+  user_id: 29
+  angkatan: 2009
+  semester: 8
+  nim: A1B0901007
+  created_at: 2013-03-14 09:56:46.765946 +07:00
+  updated_at: 2013-03-14 09:56:46.765946 +07:00
+profile_17:
+  id: 18
+  user_id: 30
+  angkatan: 2012
+  semester: 2
+  nim: "013051211052"
+  created_at: 2013-03-14 13:10:17.858693 +07:00
+  updated_at: 2013-03-14 13:10:17.858693 +07:00
+profile_18:
+  id: 19
+  user_id: 31
+  angkatan: 2012
+  semester: 2
+  nim: "013051211021"
+  created_at: 2013-03-14 17:34:23.240122 +07:00
+  updated_at: 2013-03-14 17:34:23.240122 +07:00
+profile_19:
+  id: 20
+  user_id: 32
+  angkatan: 2012
+  semester: 2
+  nim: "013051211041"
+  created_at: 2013-03-14 21:44:45.274048 +07:00
+  updated_at: 2013-03-14 21:44:45.274048 +07:00
+profile_20:
+  id: 21
+  user_id: 35
+  angkatan: 2011
+  semester: 4
+  nim: "013051111020"
+  created_at: 2013-03-15 21:37:49.480011 +07:00
+  updated_at: 2013-03-15 21:37:49.480011 +07:00
+profile_21:
+  id: 22
+  user_id: 36
+  angkatan: 2009
+  semester: 8
+  nim: A1B0901031
+  created_at: 2013-03-15 22:42:38.637342 +07:00
+  updated_at: 2013-03-15 22:42:38.637342 +07:00
+profile_22:
+  id: 23
+  user_id: 37
+  angkatan: 2011
+  semester: 4
+  nim: "013051111061"
+  created_at: 2013-03-16 05:18:05.662017 +07:00
+  updated_at: 2013-03-16 05:18:05.662017 +07:00
+profile_23:
+  id: 24
+  user_id: 39
+  angkatan: 2011
+  semester: 4
+  nim: 013051111009
+  created_at: 2013-03-20 12:53:55.064788 +07:00
+  updated_at: 2013-03-20 12:53:55.064788 +07:00
+profile_24:
+  id: 15
+  user_id: 26
+  angkatan: 2012
+  semester: 2
+  nim: "013051211066"
+  created_at: 2013-03-14 05:39:04.405339 +07:00
+  updated_at: 2013-03-20 20:31:21.519589 +07:00
+profile_25:
+  id: 25
+  user_id: 43
+  angkatan: 2009
+  semester: 8
+  nim: A1B0901005
+  created_at: 2013-03-20 22:25:32.528323 +07:00
+  updated_at: 2013-03-20 22:25:32.528323 +07:00
+profile_26:
+  id: 26
+  user_id: 27
+  angkatan: 2010
+  semester: 6
+  nim: A1B1001050
+  created_at: 2013-03-21 06:21:17.651728 +07:00
+  updated_at: 2013-03-21 06:21:17.651728 +07:00
+profile_27:
+  id: 27
+  user_id: 44
+  angkatan: 2011
+  semester: 4
+  nim: "013051111057"
+  created_at: 2013-03-21 10:54:01.563437 +07:00
+  updated_at: 2013-03-21 10:54:01.563437 +07:00
+profile_28:
+  id: 28
+  user_id: 45
+  angkatan: 2010
+  semester: 6
+  nim: A1B1001044
+  created_at: 2013-03-21 14:54:00.131523 +07:00
+  updated_at: 2013-03-21 14:54:00.131523 +07:00
+profile_29:
+  id: 29
+  user_id: 47
+  angkatan: 2008
+  semester: 0
+  nim: AXB0801008
+  created_at: 2013-03-21 23:21:14.411650 +07:00
+  updated_at: 2013-03-21 23:21:14.411650 +07:00
+profile_30:
+  id: 30
+  user_id: 48
+  angkatan: 2009
+  semester: 6
+  nim: A1B1001052
+  created_at: 2013-03-23 15:09:41.337978 +07:00
+  updated_at: 2013-03-23 15:09:41.337978 +07:00
+profile_31:
+  id: 31
+  user_id: 49
+  angkatan: 2011
+  semester: 4
+  nim: "013051111062"
+  created_at: 2013-03-24 15:26:18.311937 +07:00
+  updated_at: 2013-03-24 15:26:18.311937 +07:00
+profile_32:
+  id: 32
+  user_id: 16
+  angkatan: 2008
+  semester: 0
+  nim: AXB0801014
+  created_at: 2013-05-13 16:40:59.671802 +07:00
+  updated_at: 2013-05-13 16:40:59.671802 +07:00

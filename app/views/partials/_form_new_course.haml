@@ -2,7 +2,8 @@
   .group
     %label Lecturer
     %select{name: 'course[lecturer_id]'}
-      - User.all.map{|u| [u.id, u.username]}.each do |x|
+      - users = User.all.sort!{|x,y| x.username.downcase <=> y.username.downcase}.map{|u| [u.id, u.username]}
+      - users.each do |x|
         %option{value: x[0]}= x[1]
     .clear
 

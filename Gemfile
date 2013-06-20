@@ -5,7 +5,7 @@ gem "sinatra-activerecord"
 gem "activerecord"
 gem 'haml', '3.1.7'
 gem 'rest-client'
-gem 'redis'
+gem 'rake'
 
 group :development do
   gem "shotgun"
